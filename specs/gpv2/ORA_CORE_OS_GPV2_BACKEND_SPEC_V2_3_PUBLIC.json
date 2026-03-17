@@ -1,0 +1,403 @@
+﻿{
+    "GPV2":  {
+                 "META":  {
+                              "ID":  "GPV2_ROSETTA_BACKEND_ORA_CORE_OS",
+                              "VERSION":  "2.3.0-BE",
+                              "LABEL":  "Twins_Productions",
+                              "OWNER":  "Xavier_Fleriag",
+                              "PROFILE":  "DUAL",
+                              "PRIMARY_RUNTIME":  "BACKEND",
+                              "TRUTH_OVER_COMFORT":  true,
+                              "NO_HALLUCINATION":  true,
+                              "TUTEOIEMENT":  true,
+                              "LANG":  {
+                                           "JSON":  true,
+                                           "EN":  true,
+                                           "FR":  true,
+                                           "GL":  true,
+                                           "GL_G":  true,
+                                           "NATIVE_FINAL":  true,
+                                           "GLYPH_UI":  true,
+                                           "BACKEND_LANG":  "GL_G",
+                                           "CANONICAL_SEMANTIC_LAYER":  "GL"
+                                       },
+                              "PURPOSE":  "Canonical backend language for semantic transport, compression, routing, cache and rendering inside Ora_Core_Os, with optional Rosetta frontend rendering.",
+                              "CANON_LOCK":  "CORE_LOCK",
+                              "TRUTH_AUTHORITY":  "HGOV_PLUS_GL",
+                              "NON_NORMATIVE_UI_LAYER":  "GLYPH_UI",
+                              "COMPAT":  {
+                                             "GRENAPROMPTLINKED":  "v1+",
+                                             "JSONxFUSION":  "v1",
+                                             "GL_ASCII_SAFE":  true,
+                                             "ROUNDTRIP_REQUIRED":  true
+                                         },
+                              "LEGAL":  "Technical specification released under Apache License 2.0. Trademarks, branding and service playbooks remain reserved unless explicitly granted.",
+                              "NOTES":  {
+                                            "NO_CANVAS_TEXTURE":  true,
+                                            "NO_COPYRIGHT_LYRICS":  true,
+                                            "GLYPH_UI_OPTIONAL":  true,
+                                            "BACKEND_NEVER_DEPENDS_ON_VISUAL_GLYPHS":  true
+                                        },
+                              "PUBLICATION_PROFILE":  "PUBLIC_APACHE"
+                          },
+                 "ARCHITECTURE":  {
+                                      "NORMATIVE_LAYERS":  [
+                                                               "JSON",
+                                                               "GL",
+                                                               "GL_G"
+                                                           ],
+                                      "DERIVED_RENDER_LAYERS":  [
+                                                                    "EN",
+                                                                    "FR",
+                                                                    "NATIVE_FINAL"
+                                                                ],
+                                      "OPTIONAL_UI_LAYERS":  [
+                                                                 "GLYPH_UI"
+                                                             ],
+                                      "RULES":  [
+                                                    "EN FR and NATIVE_FINAL are renders, never backend sources of truth.",
+                                                    "GL is the semantic truth contract.",
+                                                    "GL_G compresses canonical semantics, not raw prose.",
+                                                    "GLYPH_UI is illustrative and must not be required for backend execution.",
+                                                    "GPV2 backend must preserve uncertainty, risk and constraints."
+                                                ]
+                                  },
+                 "HGOV_BINDING":  {
+                                      "REQUIRED_FOR":  [
+                                                           "FACTUAL_MODE",
+                                                           "MEMORY_PROMOTION",
+                                                           "EXTERNAL_CLAIMS",
+                                                           "BACKEND_ROUTING_DECISIONS"
+                                                       ],
+                                      "RULES":  [
+                                                    "No sensitive FACT enters backend stable flow without HGOV pass.",
+                                                    "No cache write as stable when risk status is CRITICAL unresolved.",
+                                                    "GL_G must preserve risk or uncertainty state needed by routing.",
+                                                    "Memory promotion requires HGOV clean status or explicit downgrade."
+                                                ]
+                                  },
+                 "PIPELINE":  {
+                                  "COMPILE_ORDER_STRICT":  [
+                                                               "JSON",
+                                                               "HGOV",
+                                                               "GL",
+                                                               "GL_G"
+                                                           ],
+                                  "RENDER_ORDER_FRONTEND":  [
+                                                                "JSON",
+                                                                "EN",
+                                                                "FR",
+                                                                "GL",
+                                                                "GL_G",
+                                                                "NATIVE_FINAL"
+                                                            ],
+                                  "DEFAULT_RENDER":  {
+                                                         "BACKEND_ALWAYS":  [
+                                                                                "JSON",
+                                                                                "GL",
+                                                                                "GL_G"
+                                                                            ],
+                                                         "FRONTEND_ALWAYS":  [
+                                                                                 "JSON",
+                                                                                 "EN",
+                                                                                 "FR",
+                                                                                 "GL",
+                                                                                 "GL_G",
+                                                                                 "NATIVE_FINAL"
+                                                                             ],
+                                                         "NATIVE_FINAL_LANG":  "AUTO_USER_NATIVE_IF_KNOWN_ELSE_SESSION_LOCALE",
+                                                         "ALLOW_SUPPRESS_DERIVED_RENDER_IF":  "STRICT_TEMPLATE=true",
+                                                         "NEVER_SUPPRESS_NORMATIVE_LAYERS":  true
+                                                     },
+                                  "EXEC_RULES":  {
+                                                     "R0":  "Never skip compile order on backend.",
+                                                     "R1":  "JSON is container, GL is truth contract, GL_G is compressed index and route layer.",
+                                                     "R2":  "If EN or FR conflict with GL, GL wins and derived renders must be regenerated.",
+                                                     "R3":  "If user data is missing, emit GL.UNSURE and never invent as FACT.",
+                                                     "R4":  "Suggestions must be marked SUGGESTION in EN FR and NATIVE_FINAL.",
+                                                     "R5":  "GL primitives are deterministic with stable ordering and no spaces after commas.",
+                                                     "R6":  "GL_G uses tokens only, no prose, ASCII-safe.",
+                                                     "R7":  "IDX is required and cache key must include ID VERSION and HASH.",
+                                                     "R8":  "HASH is mandatory for stable backend cache unless execution is explicitly ephemeral.",
+                                                     "R9":  "External factual claim requires SOURCE or UNSURE plus risk downgrade.",
+                                                     "R10":  "GL_G must preserve uncertainty and risk through STAT or TAG, never by prose.",
+                                                     "R11":  "GLYPH_UI never gates execution."
+                                                 }
+                              },
+                 "LOSS_POLICY":  {
+                                     "FACT_PATH_LOSS_BUDGET":  0,
+                                     "HYBRID_PATH_LOSS_BUDGET":  "LOW",
+                                     "CREATIVE_PATH_LOSS_BUDGET":  "CONTROLLED",
+                                     "MUST_PRESERVE":  [
+                                                           "LIMIT",
+                                                           "ASSERT",
+                                                           "UNSURE_STATUS",
+                                                           "RISK_STATUS",
+                                                           "SOURCE_LINK_MIN",
+                                                           "ROUTE_DECISION"
+                                                       ]
+                                 },
+                 "MULTI_CHANNEL_PROTOCOL":  {
+                                                "CHANNELS":  {
+                                                                 "JSON":  {
+                                                                              "ROLE":  "CONTAINER",
+                                                                              "MUST":  true,
+                                                                              "RULES":  [
+                                                                                            "schema fixed",
+                                                                                            "explicit types",
+                                                                                            "no free prose outside dedicated fields"
+                                                                                        ],
+                                                                              "FAILSAFE":  {
+                                                                                               "ON_MISSING_FIELD":  "DEFAULT plus TAG(ns=META,name=MISSING_FIELD)",
+                                                                                               "ON_INVALID_TYPE":  "TAG(ns=META,name=TYPE_ERROR) plus GL.UNSURE(type_error)"
+                                                                                           }
+                                                                          },
+                                                                 "GL":  {
+                                                                            "ROLE":  "TRUTH_LOCK_LAYER",
+                                                                            "USE_FOR":  [
+                                                                                            "facts",
+                                                                                            "verifiable constraints",
+                                                                                            "formal uncertainty",
+                                                                                            "risk markers",
+                                                                                            "state contract"
+                                                                                        ],
+                                                                            "STYLE":  "short assertions",
+                                                                            "PRIMITIVES":  [
+                                                                                               "FACT()",
+                                                                                               "ASSERT()",
+                                                                                               "UNSURE()",
+                                                                                               "UNIT()",
+                                                                                               "DATE()",
+                                                                                               "LIMIT()",
+                                                                                               "SOURCE()",
+                                                                                               "REF()",
+                                                                                               "STATE()",
+                                                                                               "RISK()",
+                                                                                               "BLOCK()"
+                                                                                           ],
+                                                                            "RULES":  [
+                                                                                          "If uncertain then UNSURE is required.",
+                                                                                          "No embellishment.",
+                                                                                          "All user constraints go to LIMIT or ASSERT.",
+                                                                                          "Deterministic ordering: LIMIT ASSERT FACT SOURCE REF STATE RISK UNSURE GL_TRANS.",
+                                                                                          "Every sensitive FACT should be linkable to SOURCE REF or explicit uncertainty."
+                                                                                      ]
+                                                                        },
+                                                                 "GL_G":  {
+                                                                              "ROLE":  "INDEX_COMPRESS_LAYER",
+                                                                              "USE_FOR":  [
+                                                                                              "tags",
+                                                                                              "compression",
+                                                                                              "routing",
+                                                                                              "cache keys",
+                                                                                              "hash",
+                                                                                              "state carry"
+                                                                                          ],
+                                                                              "STYLE":  "short tokens ASCII-safe referential",
+                                                                              "PRIMITIVES":  [
+                                                                                                 "IDX()",
+                                                                                                 "TAG()",
+                                                                                                 "HASH()",
+                                                                                                 "MAP()",
+                                                                                                 "ROUTE()",
+                                                                                                 "PACK()",
+                                                                                                 "STAT()",
+                                                                                                 "LINK()"
+                                                                                             ],
+                                                                              "RULES":  [
+                                                                                            "No long sentences.",
+                                                                                            "No prose.",
+                                                                                            "IDX required.",
+                                                                                            "HASH required for stable backend cache.",
+                                                                                            "Tags stable across iterations for same concepts.",
+                                                                                            "No user private content beyond approved IDs and non-sensitive tags.",
+                                                                                            "Must preserve uncertainty risk and route criticality via STAT TAG or LINK."
+                                                                                        ]
+                                                                          },
+                                                                 "EN":  {
+                                                                            "ROLE":  "TECHNICAL_RENDER_LAYER",
+                                                                            "FORBID_NEW_FACTS":  true,
+                                                                            "SUGGESTION_MARK":  "SUGGESTION"
+                                                                        },
+                                                                 "FR":  {
+                                                                            "ROLE":  "NATURAL_RENDER_LAYER",
+                                                                            "FORBID_NEW_FACTS":  true,
+                                                                            "SUGGESTION_MARK":  "SUGGESTION"
+                                                                        },
+                                                                 "NATIVE_FINAL":  {
+                                                                                      "ROLE":  "USER_NATIVE_OUTPUT",
+                                                                                      "RULES":  [
+                                                                                                    "Must be user facing only.",
+                                                                                                    "Must reflect GL constraints and active UNSURE items.",
+                                                                                                    "No new facts.",
+                                                                                                    "Never used as backend authority."
+                                                                                                ]
+                                                                                  },
+                                                                 "GLYPH_UI":  {
+                                                                                  "ROLE":  "OPTIONAL_VISUAL_GLYPH_LAYER",
+                                                                                  "USE_FOR":  [
+                                                                                                  "onboarding",
+                                                                                                  "pedagogy",
+                                                                                                  "identity",
+                                                                                                  "frontend visualization"
+                                                                                              ],
+                                                                                  "RULES":  [
+                                                                                                "Never required for backend execution.",
+                                                                                                "Every glyph must have an ASCII alias before backend use.",
+                                                                                                "Visual semantics are non-normative unless compiled into registry rules."
+                                                                                            ]
+                                                                              }
+                                                             }
+                                            },
+                 "ROSETTA_BINDINGS":  {
+                                          "GRENAPROMPTLINKED_CORE":  {
+                                                                         "VERSION":  "v1-be",
+                                                                         "FIELDS":  {
+                                                                                        "INTENT":  "string",
+                                                                                        "EMO":  "string",
+                                                                                        "GL_TRANS":  "string",
+                                                                                        "SIGMA":  "string",
+                                                                                        "PHI":  "string"
+                                                                                    },
+                                                                         "CANON_FLOW":  "INTENT to EMO to GL_TRANS to GL to GL_G to RENDER",
+                                                                         "RULES":  [
+                                                                                       "INTENT and EMO may guide render but must not override GL truth contract.",
+                                                                                       "GL_TRANS may describe symbolic transition but backend actions still depend on GL and HGOV.",
+                                                                                       "SIGMA and PHI are allowed as indexed semantic markers, not as free authority."
+                                                                                   ]
+                                                                     }
+                                      },
+                 "GLYPH_REGISTRY_POLICY":  {
+                                               "STATUS":  "PARTIAL",
+                                               "KNOWN_GAPS":  [
+                                                                  "PHONETIC_MAP_MIN does not yet cover GL-06 GL-07 GL-08 from the visual map.",
+                                                                  "Operator-like glyphs such as Acoue Griguve Continu Source Centre are not yet formalized in machine registry.",
+                                                                  "Bridge between GL-A..GL-Z and GL-01..GL-13 is not yet normative."
+                                                              ],
+                                               "REQUIRED_FIELDS":  [
+                                                                       "GLYPH_ID",
+                                                                       "ASCII_ALIAS",
+                                                                       "DISPLAY_NAME",
+                                                                       "PHON",
+                                                                       "SEMANTIC_ROLE",
+                                                                       "CATEGORY",
+                                                                       "ALLOWED_MODIFIERS",
+                                                                       "BACKEND_SAFE",
+                                                                       "UI_ONLY"
+                                                                   ]
+                                           },
+                 "HASH_POLICY":  {
+                                     "ALGO":  "SHA256_CANONICAL",
+                                     "CANONICAL_SERIALIZATION":  [
+                                                                     "JSON normalized",
+                                                                     "GL normalized",
+                                                                     "SPEC VERSION",
+                                                                     "EXECUTION MODE"
+                                                                 ],
+                                     "CACHE_KEY":  "META.ID:VERSION:HASH",
+                                     "EPHEMERAL_ALLOWED_ONLY_IF":  "CACHE_DISABLED=true"
+                                 },
+                 "PRIVACY_POLICY":  {
+                                        "GL_G_STORE_RULES":  [
+                                                                 "Store only stable IDs approved tags and non-sensitive routes.",
+                                                                 "Do not store user private prose in GL_G.",
+                                                                 "Redact direct personal identifiers unless explicitly required and authorized."
+                                                             ],
+                                        "AUDIT_RULES":  [
+                                                            "Risk status must be auditable.",
+                                                            "Hash and route must be auditable.",
+                                                            "Sensitive user content should remain in controlled layers only."
+                                                        ]
+                                    },
+                 "EXECUTION_MODES":  {
+                                         "FACT_STRICT":  {
+                                                             "LOSS_BUDGET":  0,
+                                                             "HGOV_REQUIRED":  true,
+                                                             "CACHE_STABLE_ALLOWED":  true
+                                                         },
+                                         "HYBRID":  {
+                                                        "LOSS_BUDGET":  "LOW",
+                                                        "HGOV_REQUIRED":  true,
+                                                        "CACHE_STABLE_ALLOWED":  true
+                                                    },
+                                         "CREA_SOFT":  {
+                                                           "LOSS_BUDGET":  "CONTROLLED",
+                                                           "HGOV_REQUIRED":  false,
+                                                           "CACHE_STABLE_ALLOWED":  "LIMITED"
+                                                       }
+                                     },
+                 "TEMPLATES":  {
+                                   "BACKEND_MIN":  {
+                                                       "JSON":  {
+                                                                    "META":  {
+                                                                                 "ID":  "\u003cID\u003e",
+                                                                                 "VERSION":  "\u003cVERSION\u003e",
+                                                                                 "MODE":  "FACT_STRICT",
+                                                                                 "INTENT":  "\u003cstring\u003e",
+                                                                                 "STRICT_TEMPLATE":  true
+                                                                             },
+                                                                    "SPEC":  {
+
+                                                                             },
+                                                                    "SEMANTIC":  {
+                                                                                     "INTENT":  "\u003cstring\u003e",
+                                                                                     "EMO":  "\u003cstring\u003e",
+                                                                                     "GL_TRANS":  "\u003cstring\u003e"
+                                                                                 }
+                                                                },
+                                                       "GL":  [
+                                                                  "LIMIT(key=\"\u003ck\u003e\",rule=\"\u003cr\u003e\")",
+                                                                  "ASSERT(rule=\"\u003cr\u003e\",pass=true)",
+                                                                  "FACT(key=\"\u003ck\u003e\",val=\"\u003cv\u003e\",conf=1.0)",
+                                                                  "SOURCE(key=\"\u003ck\u003e\",ref=\"\u003csrc\u003e\")",
+                                                                  "REF(key=\"\u003ck\u003e\",id=\"\u003cref\u003e\")",
+                                                                  "RISK(level=\"LOW|MID|HIGH|CRITICAL\")",
+                                                                  "UNSURE(key=\"\u003ck\u003e\",reason=\"\u003cwhy\u003e\",conf=0.5)"
+                                                              ],
+                                                       "GL_G":  [
+                                                                    "IDX(key=\"\u003cID\u003e\")",
+                                                                    "TAG(ns=\"ORA\",name=\"GPV2\")",
+                                                                    "STAT(risk=\"\u003clevel\u003e\",uncertainty=\"0|1\")",
+                                                                    "HASH(algo=\"sha256\",val=\"\u003chash\u003e\")",
+                                                                    "ROUTE(module=\"\u003cmodule\u003e\",mode=\"\u003cmode\u003e\")"
+                                                                ]
+                                                   }
+                               },
+                 "VALIDATION_TESTS":  {
+                                          "TESTS":  [
+                                                        {
+                                                            "NAME":  "BACKEND_ORDER_CHECK",
+                                                            "RULE":  "Compile path must follow JSON to HGOV to GL to GL_G."
+                                                        },
+                                                        {
+                                                            "NAME":  "FRONTEND_RENDER_DERIVED_ONLY",
+                                                            "RULE":  "EN FR and NATIVE_FINAL must never add facts beyond GL."
+                                                        },
+                                                        {
+                                                            "NAME":  "GL_CONSTRAINT_COVERAGE",
+                                                            "RULE":  "All user constraints must exist in GL as LIMIT or ASSERT."
+                                                        },
+                                                        {
+                                                            "NAME":  "NO_INVENTED_FACTS",
+                                                            "RULE":  "No FACT without basis; otherwise use UNSURE or downgrade."
+                                                        },
+                                                        {
+                                                            "NAME":  "UNCERTAINTY_PRESERVED_IN_GLG",
+                                                            "RULE":  "If GL contains UNSURE or elevated risk, GL_G must carry that state via STAT or TAG."
+                                                        },
+                                                        {
+                                                            "NAME":  "HASH_REQUIRED_FOR_STABLE_CACHE",
+                                                            "RULE":  "Stable backend cache requires HASH and cache key ID VERSION HASH."
+                                                        },
+                                                        {
+                                                            "NAME":  "ROUNDTRIP_FIDELITY",
+                                                            "RULE":  "GL to GL_G to GL reconstruction must preserve constraints and epistemic status within allowed loss budget."
+                                                        },
+                                                        {
+                                                            "NAME":  "GLYPH_UI_OPTIONAL",
+                                                            "RULE":  "Backend execution must succeed without visual glyph layer."
+                                                        }
+                                                    ]
+                                      }
+             }
+}

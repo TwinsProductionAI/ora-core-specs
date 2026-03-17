@@ -1,0 +1,17 @@
+﻿{
+  "repo_name": "ora-core-specs",
+  "license": "Apache-2.0",
+  "status": "publication_ready_local_bundle",
+  "public_scope": [
+    "HGOV specs",
+    "GPV2 specs",
+    "whitepapers",
+    "integration notes",
+    "implementation-facing assets"
+  ],
+  "private_scope_excluded": [
+    "PME playbooks",
+    "ChatGPT Projects client packs",
+    "commercial delivery assets"
+  ]
+}

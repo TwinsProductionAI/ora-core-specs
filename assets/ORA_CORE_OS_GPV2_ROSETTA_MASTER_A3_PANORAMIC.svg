@@ -1,0 +1,277 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 4200 2970">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="45%" stop-color="#141828"/>
+      <stop offset="100%" stop-color="#241635"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1a2132" stop-opacity="0.86"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e7c27a"/>
+      <stop offset="45%" stop-color="#f8e8b7"/>
+      <stop offset="100%" stop-color="#c99645"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8fe7dc"/>
+      <stop offset="100%" stop-color="#5db9c9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <pattern id="grid" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M 120 0 L 0 0 0 120" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <style>
+      .panel { fill:url(#panelGrad); stroke:#d1a763; stroke-opacity:0.58; stroke-width:2; rx:34; filter:url(#shadow); }
+      .title { font-family:'Palatino Linotype','Book Antiqua',Georgia,serif; font-size:78px; letter-spacing:11px; fill:url(#goldGrad); }
+      .subtitle { font-family:'Segoe UI','Trebuchet MS',sans-serif; font-size:26px; letter-spacing:3px; fill:#d9dde8; opacity:0.88; }
+      .panelTitle { font-family:'Segoe UI Semibold','Trebuchet MS',sans-serif; font-size:30px; letter-spacing:5px; fill:url(#goldGrad); }
+      .sectionLead { font-family:'Segoe UI',sans-serif; font-size:24px; fill:#f4f6fb; font-weight:600; }
+      .body { font-family:'Segoe UI','Trebuchet MS',sans-serif; font-size:24px; fill:#dce4f3; }
+      .body2 { font-family:'Segoe UI','Trebuchet MS',sans-serif; font-size:22px; fill:#cdd6ea; }
+      .small { font-family:'Segoe UI','Trebuchet MS',sans-serif; font-size:20px; fill:#b5c3dd; }
+      .micro { font-family:'Segoe UI','Trebuchet MS',sans-serif; font-size:18px; fill:#9eafcf; }
+      .code { font-family:Consolas,'Cascadia Mono','Courier New',monospace; font-size:23px; fill:#9ce8df; }
+      .codeSmall { font-family:Consolas,'Cascadia Mono','Courier New',monospace; font-size:20px; fill:#8fd9d5; }
+      .chip { fill:#0f1522; stroke:#7fe2d4; stroke-opacity:0.45; stroke-width:1.5; rx:16; }
+      .stage { fill:#121b2b; stroke:#7fe2d4; stroke-opacity:0.5; stroke-width:2; rx:18; }
+      .stageGold { fill:#171422; stroke:#d1a763; stroke-opacity:0.6; stroke-width:2; rx:18; }
+      .divider { stroke:#ffffff; stroke-opacity:0.08; stroke-width:2; }
+      .accent { fill:url(#cyanGrad); }
+      .goldLine { stroke:#d1a763; stroke-opacity:0.65; stroke-width:2; }
+      .cyanLine { stroke:#7fe2d4; stroke-opacity:0.58; stroke-width:2; }
+      .warn { fill:#ffcf80; }
+    </style>
+  </defs>
+
+  <rect width="4200" height="2970" fill="url(#bgGrad)"/>
+  <rect width="4200" height="2970" fill="url(#grid)"/>
+  <circle cx="3540" cy="420" r="520" fill="#5b2f78" opacity="0.12"/>
+  <circle cx="3220" cy="2490" r="640" fill="#167f86" opacity="0.08"/>
+  <circle cx="660" cy="2630" r="540" fill="#6c4a1d" opacity="0.07"/>
+
+  <rect class="panel" x="120" y="110" width="3960" height="270"/>
+  <text class="title" x="180" y="230">ORA_CORE_OS  /  GPV2 ROSETTA MASTER</text>
+  <text class="subtitle" x="182" y="290">PANORAMIC A3  |  BACKEND CANON MAP  |  VERSION 2.3.0-BE  |  TWINS PRODUCTIONS</text>
+  <text class="code" x="2470" y="220">COMPILE PATH  :  JSON -&gt; HGOV -&gt; GL -&gt; GL_G -&gt; HASH -&gt; ROUTE</text>
+  <text class="codeSmall" x="2470" y="265">RENDER PATH   :  JSON -&gt; EN -&gt; FR -&gt; GL -&gt; GL_G -&gt; NATIVE_FINAL</text>
+  <text class="small" x="2470" y="310">Truth authority = HGOV + GL  |  GLYPH_UI = optional visual layer, never backend source</text>
+
+  <rect class="panel" x="120" y="430" width="960" height="670"/>
+  <text class="panelTitle" x="170" y="500">META / CANON</text>
+  <line class="goldLine" x1="170" y1="525" x2="1030" y2="525"/>
+  <text class="code" x="170" y="585">ID       GPV2_ROSETTA_BACKEND_ORA_CORE_OS</text>
+  <text class="code" x="170" y="630">PROFILE  DUAL</text>
+  <text class="code" x="170" y="675">RUNTIME  BACKEND PRIMARY</text>
+  <text class="body" x="170" y="735">Purpose</text>
+  <text class="body2" x="170" y="775">Canonical language for semantic transport,</text>
+  <text class="body2" x="170" y="807">compression, routing, cache and render.</text>
+  <text class="body" x="170" y="875">Axioms</text>
+  <text class="body2" x="170" y="915">- truth over comfort</text>
+  <text class="body2" x="170" y="947">- no hallucination by contract</text>
+  <text class="body2" x="170" y="979">- no skip order on backend</text>
+  <text class="body2" x="170" y="1011">- no new facts in derived renders</text>
+  <text class="small" x="170" y="1065">Canonical semantic layer: GL  |  Backend language: GL_G</text>
+
+  <rect class="panel" x="1120" y="430" width="2960" height="670"/>
+  <text class="panelTitle" x="1170" y="500">CANONICAL BACKEND FLOW</text>
+  <line class="goldLine" x1="1170" y1="525" x2="4030" y2="525"/>
+
+  <rect class="stageGold" x="1185" y="610" width="380" height="190"/>
+  <text class="panelTitle" x="1280" y="705">JSON</text>
+  <text class="body2" x="1235" y="750">typed container</text>
+  <text class="body2" x="1235" y="785">schema + input state</text>
+
+  <rect class="stage" x="1645" y="610" width="380" height="190"/>
+  <text class="panelTitle" x="1735" y="705">HGOV</text>
+  <text class="body2" x="1690" y="750">risk, premise, truth</text>
+  <text class="body2" x="1690" y="785">memory discipline</text>
+
+  <rect class="stageGold" x="2105" y="610" width="380" height="190"/>
+  <text class="panelTitle" x="2235" y="705">GL</text>
+  <text class="body2" x="2145" y="750">truth contract</text>
+  <text class="body2" x="2145" y="785">constraints + unsure</text>
+
+  <rect class="stage" x="2565" y="610" width="380" height="190"/>
+  <text class="panelTitle" x="2675" y="705">GL_G</text>
+  <text class="body2" x="2605" y="750">index + pack + route</text>
+  <text class="body2" x="2605" y="785">carry risk state</text>
+
+  <rect class="stageGold" x="3025" y="610" width="380" height="190"/>
+  <text class="panelTitle" x="3128" y="705">HASH</text>
+  <text class="body2" x="3065" y="750">SHA256 canonical</text>
+  <text class="body2" x="3065" y="785">ID:VERSION:HASH</text>
+
+  <rect class="stage" x="3485" y="610" width="510" height="190"/>
+  <text class="panelTitle" x="3630" y="705">ROUTE</text>
+  <text class="body2" x="3530" y="750">cache + module dispatch</text>
+  <text class="body2" x="3530" y="785">audit + safe persistence</text>
+
+  <line class="cyanLine" x1="1565" y1="705" x2="1645" y2="705"/>
+  <line class="cyanLine" x1="2025" y1="705" x2="2105" y2="705"/>
+  <line class="cyanLine" x1="2485" y1="705" x2="2565" y2="705"/>
+  <line class="cyanLine" x1="2945" y1="705" x2="3025" y2="705"/>
+  <line class="cyanLine" x1="3405" y1="705" x2="3485" y2="705"/>
+
+  <text class="body" x="1185" y="885">Backend rules</text>
+  <text class="body2" x="1185" y="925">- GL is the authority of meaning.</text>
+  <text class="body2" x="1185" y="957">- GL_G compresses semantics, not prose.</text>
+  <text class="body2" x="1185" y="989">- EN / FR / NATIVE_FINAL are derived renders only.</text>
+  <text class="body2" x="1185" y="1021">- GL_G must preserve uncertainty and risk via STAT or TAG.</text>
+  <text class="body2" x="1185" y="1053">- GLYPH_UI never gates execution.</text>
+
+  <rect class="panel" x="120" y="1150" width="960" height="960"/>
+  <text class="panelTitle" x="170" y="1220">LEXICON CANON</text>
+  <line class="goldLine" x1="170" y1="1245" x2="1030" y2="1245"/>
+  <text class="sectionLead" x="170" y="1310">BOOT</text>
+  <text class="codeSmall" x="170" y="1348">INIT:COEUR_ORA   |   BOOT:SESSION   |   FUSION++</text>
+  <text class="sectionLead" x="170" y="1415">MEMORY</text>
+  <text class="codeSmall" x="170" y="1453">REM   |   REM++   |   SYNC:MEM   |   CLEAR:CACHE</text>
+  <text class="sectionLead" x="170" y="1520">MODES</text>
+  <text class="codeSmall" x="170" y="1558">ORA_CREA120%   |   AURA:MXB   |   MOD:PORTFOLIO</text>
+  <text class="codeSmall" x="170" y="1590">MOD:ARCH+   |   MOD:TCG_NEXUS   |   MOD:SHORTS</text>
+  <text class="sectionLead" x="170" y="1657">RENDER ENGINES</text>
+  <text class="codeSmall" x="170" y="1695">VG+   |   RIME   |   EMO+   |   DreamCore</text>
+  <text class="codeSmall" x="170" y="1727">EchoTwin   |   NeuroFlux</text>
+  <text class="sectionLead" x="170" y="1794">SAFETY</text>
+  <text class="codeSmall" x="170" y="1832">PRIMORDIA:TRIBUNAL   |   PRIMORDIA:VETO</text>
+  <text class="codeSmall" x="170" y="1864">PRIMORDIA:REPORT</text>
+  <text class="sectionLead" x="170" y="1931">DIAGNOSTICS</text>
+  <text class="codeSmall" x="170" y="1969">SELF:AUDIT   |   VG+:TRACE   |   QoS:STATS</text>
+  <text class="sectionLead" x="170" y="2036">EXPORTS</text>
+  <text class="codeSmall" x="170" y="2074">EXPORT:PDF_A4   |   EXPORT:JSON</text>
+  <text class="body2" x="170" y="2138">Writing rules</text>
+  <text class="small" x="170" y="2172">Namespaces uppercase. ':' for namespace. '++' for variants.</text>
+  <text class="small" x="170" y="2202">Before complex creation => PRIMORDIA:VETO. Before publication => VG+:TRACE.</text>
+
+  <rect class="panel" x="1120" y="1150" width="1420" height="960"/>
+  <text class="panelTitle" x="1170" y="1220">MULTI CHANNEL / ROLE MAP</text>
+  <line class="goldLine" x1="1170" y1="1245" x2="2490" y2="1245"/>
+  <text class="sectionLead" x="1170" y="1310">LAYER</text>
+  <text class="sectionLead" x="1460" y="1310">ROLE</text>
+  <text class="sectionLead" x="1970" y="1310">BACKEND</text>
+  <text class="sectionLead" x="2210" y="1310">RULE</text>
+  <line class="divider" x1="1170" y1="1340" x2="2490" y2="1340"/>
+
+  <text class="code" x="1170" y="1405">JSON</text>
+  <text class="body2" x="1460" y="1405">typed container</text>
+  <text class="body2" x="1970" y="1405">MUST</text>
+  <text class="small" x="2210" y="1405">schema fixed, no free prose</text>
+
+  <text class="code" x="1170" y="1485">EN</text>
+  <text class="body2" x="1460" y="1485">technical render</text>
+  <text class="body2" x="1970" y="1485">DERIVED</text>
+  <text class="small" x="2210" y="1485">no new facts, mark SUGGESTION</text>
+
+  <text class="code" x="1170" y="1565">FR</text>
+  <text class="body2" x="1460" y="1565">natural emo render</text>
+  <text class="body2" x="1970" y="1565">DERIVED</text>
+  <text class="small" x="2210" y="1565">no new facts, voice only</text>
+
+  <text class="code" x="1170" y="1645">GL</text>
+  <text class="body2" x="1460" y="1645">truth lock layer</text>
+  <text class="body2" x="1970" y="1645">CORE</text>
+  <text class="small" x="2210" y="1645">facts, limits, unsure, risk</text>
+
+  <text class="code" x="1170" y="1725">GL_G</text>
+  <text class="body2" x="1460" y="1725">index compress layer</text>
+  <text class="body2" x="1970" y="1725">CORE</text>
+  <text class="small" x="2210" y="1725">route, tag, hash, carry state</text>
+
+  <text class="code" x="1170" y="1805">NATIVE_FINAL</text>
+  <text class="body2" x="1460" y="1805">user facing recap</text>
+  <text class="body2" x="1970" y="1805">OUTPUT</text>
+  <text class="small" x="2210" y="1805">native language, no backend authority</text>
+
+  <text class="code" x="1170" y="1885">GLYPH_UI</text>
+  <text class="body2" x="1460" y="1885">visual pedagogy</text>
+  <text class="body2" x="1970" y="1885">OPTION</text>
+  <text class="small" x="2210" y="1885">never required for execution</text>
+
+  <text class="body" x="1170" y="1985">Non negotiable</text>
+  <text class="body2" x="1170" y="2025">- If EN or FR conflict with GL, GL wins and renders regenerate.</text>
+  <text class="body2" x="1170" y="2057">- External factual claim requires SOURCE or explicit UNSURE.</text>
+  <text class="body2" x="1170" y="2089">- Derived layers mirror GL constraints and uncertainty, never extend them.</text>
+
+  <rect class="panel" x="2570" y="1150" width="1510" height="960"/>
+  <text class="panelTitle" x="2620" y="1220">PRIMITIVES / COMPRESSION CORE</text>
+  <line class="goldLine" x1="2620" y1="1245" x2="4030" y2="1245"/>
+
+  <rect class="stageGold" x="2625" y="1295" width="680" height="740"/>
+  <text class="panelTitle" x="2870" y="1365">GL</text>
+  <text class="codeSmall" x="2665" y="1435">LIMIT(key,rule)      hard user / system constraints</text>
+  <text class="codeSmall" x="2665" y="1495">ASSERT(rule,pass)    invariant or check result</text>
+  <text class="codeSmall" x="2665" y="1555">FACT(key,val,conf)   supported factual statement</text>
+  <text class="codeSmall" x="2665" y="1615">UNSURE(key,reason,conf)  formal uncertainty</text>
+  <text class="codeSmall" x="2665" y="1675">UNIT(key,val)        normalize measurable units</text>
+  <text class="codeSmall" x="2665" y="1735">DATE(key,val)        temporal anchor</text>
+  <text class="codeSmall" x="2665" y="1795">SOURCE(key,ref)      external source binding</text>
+  <text class="codeSmall" x="2665" y="1855">REF(key,id)          local or audit reference</text>
+  <text class="codeSmall" x="2665" y="1915">STATE(name,val)      semantic state label</text>
+  <text class="codeSmall" x="2665" y="1975">RISK(level)          low / mid / high / critical</text>
+  <text class="codeSmall" x="2665" y="2035">BLOCK(reason)        hard stop on assertion path</text>
+
+  <rect class="stage" x="3340" y="1295" width="690" height="740"/>
+  <text class="panelTitle" x="3580" y="1365">GL_G</text>
+  <text class="codeSmall" x="3380" y="1435">IDX(key)             canonical identity</text>
+  <text class="codeSmall" x="3380" y="1495">TAG(ns,name)         stable concept tag</text>
+  <text class="codeSmall" x="3380" y="1555">HASH(algo,val)       stable cache hash</text>
+  <text class="codeSmall" x="3380" y="1615">MAP(src,dst)         semantic projection</text>
+  <text class="codeSmall" x="3380" y="1675">ROUTE(module,mode)   backend dispatch</text>
+  <text class="codeSmall" x="3380" y="1735">PACK(name,val)       compact payload</text>
+  <text class="codeSmall" x="3380" y="1795">STAT(risk,uq)        carry risk / uncertainty</text>
+  <text class="codeSmall" x="3380" y="1855">LINK(key,target)     semantic relation</text>
+  <text class="body2" x="3380" y="1935">GL_G is token only.</text>
+  <text class="body2" x="3380" y="1969">No prose. ASCII safe.</text>
+  <text class="body2" x="3380" y="2003">Must preserve risk and unsure state.</text>
+
+  <text class="small" x="2625" y="2080">Deterministic ordering = LIMIT ASSERT FACT SOURCE REF STATE RISK UNSURE GL_TRANS</text>
+
+  <rect class="panel" x="120" y="2170" width="1200" height="650"/>
+  <text class="panelTitle" x="170" y="2240">VALIDATION / QUALITY GATES</text>
+  <line class="goldLine" x1="170" y1="2265" x2="1270" y2="2265"/>
+  <text class="codeSmall" x="170" y="2335">ORDER_CHECK              JSON -&gt; HGOV -&gt; GL -&gt; GL_G</text>
+  <text class="codeSmall" x="170" y="2395">DERIVED_NO_NEW_FACTS     EN / FR / NATIVE_FINAL add nothing</text>
+  <text class="codeSmall" x="170" y="2455">GL_CONSTRAINT_COVERAGE   all constraints in LIMIT / ASSERT</text>
+  <text class="codeSmall" x="170" y="2515">NO_INVENTED_FACTS        else UNSURE or downgrade</text>
+  <text class="codeSmall" x="170" y="2575">IDX_REQUIRED             identity required in GL_G</text>
+  <text class="codeSmall" x="170" y="2635">HASH_REQUIRED            stable backend cache needs hash</text>
+  <text class="codeSmall" x="170" y="2695">UNCERTAINTY_PRESERVED    STAT or TAG carries risk / unsure</text>
+  <text class="codeSmall" x="170" y="2755">ROUNDTRIP_FIDELITY       GL -&gt; GL_G -&gt; GL within loss budget</text>
+
+  <rect class="panel" x="1360" y="2170" width="1280" height="650"/>
+  <text class="panelTitle" x="1410" y="2240">GRENAPROMPTLINKED CORE</text>
+  <line class="goldLine" x1="1410" y1="2265" x2="2590" y2="2265"/>
+  <text class="sectionLead" x="1410" y="2335">Human triple read</text>
+  <text class="code" x="1410" y="2380">INTENT   |   EMO   |   GL_TRANS</text>
+  <text class="sectionLead" x="1410" y="2450">AI triple read</text>
+  <text class="code" x="1410" y="2495">[INTENT]   [EMO]   [GL_TRANS]</text>
+  <text class="body2" x="1410" y="2570">Intent maps the goal. Emo maps valence of render.</text>
+  <text class="body2" x="1410" y="2602">GL_TRANS maps symbolic transition, not truth authority.</text>
+  <text class="codeSmall" x="1410" y="2678">PHI(t) = Sigma_i (f_i * omega_i * alpha_i)</text>
+  <text class="codeSmall" x="1410" y="2716">DELTA_PHI = PHI_b - PHI_a = Sigma( flux_GL(x-&gt;y) )</text>
+  <text class="small" x="1410" y="2788">Use as semantic markers and render guides. Backend action still depends on HGOV + GL.</text>
+
+  <rect class="panel" x="2680" y="2170" width="1400" height="650"/>
+  <text class="panelTitle" x="2730" y="2240">ROSETTA SPECTRUM / HARDENING</text>
+  <line class="goldLine" x1="2730" y1="2265" x2="4030" y2="2265"/>
+  <text class="sectionLead" x="2730" y="2335">Letter spectrum</text>
+  <text class="codeSmall" x="2730" y="2375">GL-A activation   | GL-B boundary   | GL-C command   | GL-D decision</text>
+  <text class="codeSmall" x="2730" y="2407">GL-E entry        | GL-F filter     | GL-G gate      | GL-H horizon</text>
+  <text class="codeSmall" x="2730" y="2439">GL-I index        | GL-J junction   | GL-K kernel    | GL-L link</text>
+  <text class="codeSmall" x="2730" y="2471">GL-M memory       | GL-N nexus      | GL-O object    | GL-P port</text>
+  <text class="codeSmall" x="2730" y="2503">GL-Q quality      | GL-R route      | GL-S signal    | GL-T trace</text>
+  <text class="codeSmall" x="2730" y="2535">GL-U unit/url     | GL-V veto       | GL-W web       | GL-X fusion</text>
+  <text class="codeSmall" x="2730" y="2567">GL-Y yield/style  | GL-Z zoom/end</text>
+  <text class="sectionLead" x="2730" y="2635">Numeric / phonetic map</text>
+  <text class="codeSmall" x="2730" y="2675">GL-01 Aon | GL-02 Dyne | GL-03 Tria | GL-04 Quarn | GL-05 Penth</text>
+  <text class="codeSmall" x="2730" y="2707">GL-06 Seph | GL-07 Octe | GL-08 Octen | GL-09 Noven | GL-13 Nulla</text>
+  <text class="small" x="2730" y="2765">Hardening: glyph registry is still partial. Bridge GL-A..GL-Z to GL-01..GL-13 is not yet normative.</text>
+  <text class="small" x="2730" y="2795">Rule: keep GLYPH_UI as visual pedagogy until every glyph has ASCII alias and registry fields.</text>
+
+  <rect class="panel" x="120" y="2860" width="3960" height="0" opacity="0"/>
+  <text class="subtitle" x="180" y="2895">DUO COEUR  |  HGOV filters what may be asserted, cached and promoted.  GPV2 transports that state in a stable backend language.</text>
+</svg>
