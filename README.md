@@ -5,6 +5,7 @@ Public technical specifications for the latest Ora_Core_Os modules.
 ## Scope
 
 This repository is the publication-ready public bundle for:
+- ORCHESTRATEUR_LLM orchestration specifications
 - HGOV epistemic governance specifications
 - GPV2 backend and semantic transport specifications
 - glyph and Rosetta-related technical notes that are useful for implementation
@@ -34,5 +35,5 @@ See `TRADEMARKS.md`.
 
 ## Important publication note
 
-The public GPV2 JSON spec in this repository is a publication profile.
-It keeps the technical content but replaces the private legal wording with an Apache-compatible public release statement.
+The public specs in this repository are publication profiles.
+They keep the technical content while excluding private delivery material and client-specific deployment instructions.

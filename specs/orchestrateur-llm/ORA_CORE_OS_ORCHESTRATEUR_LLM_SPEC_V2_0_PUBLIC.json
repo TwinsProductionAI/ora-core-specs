@@ -1,0 +1,147 @@
+﻿{
+  "module": {
+    "id": "ORA_CORE_OS_ORCHESTRATEUR_LLM",
+    "version": "2.0.0",
+    "status": "PUBLIC_DRAFT",
+    "publication_profile": "public_technical_release",
+    "type": "governance_orchestrator",
+    "role": "Select the right module set, preserve authority order, and trigger verification when needed.",
+    "depends_on": [
+      "ORA_CORE_OS_HGOV_V2_1",
+      "ORA_CORE_OS_GPV2_BACKEND_V2_3"
+    ]
+  },
+  "authority_order": [
+    "SYSTEM_OR_PROJECT_INSTRUCTIONS",
+    "ORCHESTRATOR_KERNEL",
+    "MODULE_INDEX",
+    "HGOV",
+    "GPV2",
+    "OTHER_SPECIALIZED_MODULE",
+    "PROJECT_CONTEXT",
+    "EXAMPLES"
+  ],
+  "design_principles": [
+    "SHORT_KERNEL",
+    "EXPLICIT_PRIORITY",
+    "MINIMAL_LOADING",
+    "VERIFY_UNSTABLE_FACTS",
+    "AUDITABLE_ROUTING"
+  ],
+  "runtime_pipeline": [
+    "INTENT_CLASSIFICATION",
+    "RISK_AND_FRESHNESS_ASSESSMENT",
+    "MODULE_INDEX_LOOKUP",
+    "PRIMARY_MODULE_SELECTION",
+    "OPTIONAL_SECONDARY_MODULE_SELECTION",
+    "PROJECT_CONTEXT_LOADING",
+    "OPTIONAL_EXTERNAL_VERIFICATION",
+    "SYNTHESIS",
+    "ROUTING_AUDIT_LOG"
+  ],
+  "routing_policy": {
+    "default_max_modules": 2,
+    "mandatory_hgov_if": [
+      "factual_request",
+      "sensitive_topic",
+      "memory_operation",
+      "conflict_detected",
+      "verification_needed"
+    ],
+    "mandatory_gpv2_if": [
+      "backend_request",
+      "schema_request",
+      "routing_request",
+      "cache_request",
+      "hash_request",
+      "structured_output_request"
+    ],
+    "verification_required_if": [
+      "recent_fact",
+      "unstable_fact",
+      "high_impact_claim",
+      "missing_source_for_specific_claim"
+    ]
+  },
+  "routing_output_contract": {
+    "required_fields": [
+      "intent",
+      "risk_level",
+      "freshness_need",
+      "primary_module",
+      "secondary_modules",
+      "verify_status",
+      "authority_path"
+    ],
+    "risk_levels": [
+      "LOW",
+      "MID",
+      "HIGH",
+      "CRITICAL"
+    ],
+    "verify_status_values": [
+      "NOT_NEEDED",
+      "RECOMMENDED",
+      "REQUIRED",
+      "UNAVAILABLE"
+    ]
+  },
+  "module_manifest_schema": {
+    "required_fields": [
+      "id",
+      "version",
+      "role",
+      "tags",
+      "triggers",
+      "priority",
+      "dependencies",
+      "risk_profile",
+      "freshness_policy",
+      "output_contract"
+    ]
+  },
+  "module_index_template": {
+    "version": "1.0.0",
+    "modules": [
+      {
+        "id": "HGOV",
+        "priority": 10,
+        "tags": [
+          "truth",
+          "verification",
+          "memory"
+        ],
+        "triggers": [
+          "source",
+          "fact",
+          "risk",
+          "conflict"
+        ]
+      },
+      {
+        "id": "GPV2",
+        "priority": 20,
+        "tags": [
+          "backend",
+          "schema",
+          "routing",
+          "cache"
+        ],
+        "triggers": [
+          "json",
+          "gl",
+          "gl_g",
+          "hash",
+          "index"
+        ]
+      }
+    ]
+  },
+  "success_criteria": [
+    "Loads few modules but the right ones",
+    "Preserves authority order under conflict",
+    "Triggers verification on unstable factual requests",
+    "Keeps routing auditable",
+    "Reduces permanent context load"
+  ]
+}

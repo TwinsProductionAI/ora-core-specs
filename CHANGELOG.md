@@ -1,5 +1,10 @@
 ﻿# Changelog
 
+## 2026-04-10
+- Added the first public technical publication bundle for `ORCHESTRATEUR_LLM`.
+- Added public orchestration kernel, white paper, integration note and public JSON spec.
+- Updated repository scope and manifest to include orchestration specifications.
+
 ## 2026-03-17
 - Created first publication-ready public bundle for HGOV and GPV2.
 - Added public Apache publication profile for `ORA_CORE_OS_GPV2_BACKEND_SPEC_V2_3`.
