@@ -1,0 +1,129 @@
+﻿{
+  "GLK_PROFILE": {
+    "META": {
+      "ID": "GLK_GIBBERLINK_KEY_WORLD_MONETARY_GOLD",
+      "VERSION": "0.1.0",
+      "OWNER_LAYER": "GPV2",
+      "PROFILE": "BACKEND_PRIMARY",
+      "TRUTH_LAYER": "GL",
+      "INDEX_LAYER": "GL_G",
+      "COMPILE_PATH": [
+        "JSON",
+        "HGOV",
+        "GL",
+        "GL_G",
+        "HASH",
+        "ROUTE"
+      ],
+      "PURPOSE": "Generate a governed low-volatility monetary index key anchored to world monetary gold value.",
+      "CLAIM": "LOW_VOLATILITY_STABLE_REFERENCE",
+      "NON_CLAIM": "ZERO_MARKET_VOLATILITY",
+      "ASCII_SAFE": true
+    },
+    "ANCHOR": {
+      "VALUE_SCOPE": "WORLD_MONETARY_GOLD_VALUE",
+      "ASSET": "OFFICIAL_MONETARY_GOLD",
+      "ASSET_CODE": "AU",
+      "BASE_UNIT": "MG_AU9999",
+      "REFERENCE_NUMERAIRE": "BASKET_NEUTRAL",
+      "SUPPLY_MODEL": "FIXED_REFERENCE_SUPPLY"
+    },
+    "KEY_FORMAT": {
+      "PATTERN": "GLK.<scope>.<asset>.<unit>.<profile>.<version>",
+      "EXAMPLE": "GLK.WMGV.AU.MG.S1.V1",
+      "FIELDS": {
+        "scope": "WMGV",
+        "asset": "AU",
+        "unit": "MG",
+        "profile": "S1",
+        "version": "V1"
+      }
+    },
+    "INPUT_SCHEMA": {
+      "official_monetary_gold_troy_oz": "number",
+      "gold_fix_ref": "number",
+      "fx_basket_neutral": "number",
+      "glk_supply_ref": "number",
+      "prev_settlement": "number",
+      "source_quorum": "boolean",
+      "hgov_pass": "boolean",
+      "publish_cycle": "string"
+    },
+    "FORMULA": {
+      "WMGV_t": "OFFICIAL_MONETARY_GOLD_TROY_OZ_t * GOLD_FIX_REF_t",
+      "GLK_RAW_t": "(WMGV_t / GLK_SUPPLY_REF) * FX_BASKET_NEUTRAL_t",
+      "GLK_SMOOTH_t": "(0.25 * EMA_30(GLK_RAW_t)) + (0.75 * EMA_180(GLK_RAW_t))",
+      "GLK_GUARD_t": "clamp(GLK_SMOOTH_t, GLK_PREV * 0.99, GLK_PREV * 1.01)",
+      "GLK_SETTLEMENT_t": "if HGOV_PASS_t and SOURCE_QUORUM_t then GLK_GUARD_t else GLK_PREV"
+    },
+    "STABILITY_ENGINE": {
+      "PUBLISH_INTERVAL": "DAILY_CLOSE",
+      "INTRADAY_REPRICE": false,
+      "EMA_SHORT_DAYS": 30,
+      "EMA_LONG_DAYS": 180,
+      "MAX_STEP_UP_PCT": 1.0,
+      "MAX_STEP_DOWN_PCT": 1.0,
+      "ON_GOV_FAIL": "FREEZE_PREVIOUS_VALUE",
+      "ON_SOURCE_FAIL": "FREEZE_PREVIOUS_VALUE",
+      "MONTHLY_REVIEW_REQUIRED": true
+    },
+    "HGOV_RULES": [
+      "No canonical publish if source quorum is false.",
+      "No stable cache write if risk is HIGH or CRITICAL unresolved.",
+      "No monetary claim without explicit source trace and reproducible hash.",
+      "If reserve or price feeds diverge materially, route to audit and keep previous settlement."
+    ],
+    "GL_TEMPLATE": [
+      "LIMIT(GLK.anchor,official_monetary_gold_only)",
+      "LIMIT(GLK.publish_interval,daily_close)",
+      "LIMIT(GLK.max_step_pct,1.0)",
+      "ASSERT(GLK.base_unit,mg_AU9999)",
+      "ASSERT(GLK.fx_mode,basket_neutral)",
+      "ASSERT(GLK.smoothing,ema30_ema180)",
+      "FACT(GLK.scope,world_monetary_gold_value)",
+      "FACT(GLK.index_mode,smoothed_bounded_settlement)",
+      "SOURCE(GLK.reserve_feed,RESERVE_FEED_A)",
+      "SOURCE(GLK.price_feed,PRICE_FEED_A)",
+      "REF(GLK.key,GLK.WMGV.AU.MG.S1.V1)",
+      "STATE(GLK.status,stable_reference_candidate)",
+      "RISK(GLK.market,residual_low)",
+      "UNSURE(GLK.live_tick,intraday_noise,0.35)"
+    ],
+    "GL_G_TEMPLATE": [
+      "IDX(GLK.WMGV.AU.MG.S1.V1)",
+      "TAG(ns=ASSET,name=GOLD)",
+      "TAG(ns=SCOPE,name=WORLD_MONETARY)",
+      "TAG(ns=UNIT,name=MG_AU9999)",
+      "TAG(ns=MODEL,name=SMOOTHED_BOUNDED)",
+      "STAT(risk=LOW)",
+      "MAP(src=WMGV,dst=GLK_SETTLEMENT)",
+      "ROUTE(module=MONETARY_INDEX,mode=STABLE_REF)",
+      "PACK(name=publish,val=DAILY_CLOSE)",
+      "LINK(key=anchor,target=OFFICIAL_MONETARY_GOLD)",
+      "HASH(algo=SHA256,val=ID:VERSION:HASH)"
+    ],
+    "HASH_POLICY": {
+      "REQUIRED": true,
+      "CACHE_KEY": "ID:VERSION:HASH",
+      "INPUTS": [
+        "canonical_json",
+        "canonical_gl",
+        "profile_version",
+        "publish_cycle"
+      ]
+    },
+    "ROUTING": {
+      "STABLE_ROUTE": "MONETARY_INDEX",
+      "AUDIT_ROUTE": "HGOV_AUDIT",
+      "CACHE_MODE": "STABLE_ONLY_IF_LOW_RISK"
+    },
+    "VALIDATION": [
+      "Deterministic IDX generation",
+      "Deterministic HASH generation",
+      "Published step bounded to profile threshold",
+      "Freeze on HGOV or source failure",
+      "No loss of LIMIT ASSERT RISK UNSURE on GL to GL_G path",
+      "Roundtrip sufficient for audit reconstruction"
+    ]
+  }
+}

@@ -1,0 +1,265 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1189mm" height="841mm" viewBox="0 0 11890 8410">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="45%" stop-color="#141828"/>
+      <stop offset="100%" stop-color="#241635"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#1a2132" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e7c27a"/>
+      <stop offset="45%" stop-color="#f8e8b7"/>
+      <stop offset="100%" stop-color="#c99645"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8fe7dc"/>
+      <stop offset="100%" stop-color="#5db9c9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <pattern id="grid" width="180" height="180" patternUnits="userSpaceOnUse">
+      <path d="M 180 0 L 0 0 0 180" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+    <style>
+      .panel { fill:url(#panelGrad); stroke:#d1a763; stroke-opacity:0.58; stroke-width:3; rx:48; filter:url(#shadow); }
+      .title { font-family:'Palatino Linotype','Book Antiqua',Georgia,serif; font-size:170px; letter-spacing:18px; fill:url(#goldGrad); }
+      .subtitle { font-family:'Segoe UI','Trebuchet MS',sans-serif; font-size:48px; letter-spacing:4px; fill:#d9dde8; opacity:0.9; }
+      .panelTitle { font-family:'Segoe UI Semibold','Trebuchet MS',sans-serif; font-size:66px; letter-spacing:7px; fill:url(#goldGrad); }
+      .sectionLead { font-family:'Segoe UI',sans-serif; font-size:52px; fill:#f4f6fb; font-weight:600; }
+      .body { font-family:'Segoe UI','Trebuchet MS',sans-serif; font-size:42px; fill:#dce4f3; }
+      .body2 { font-family:'Segoe UI','Trebuchet MS',sans-serif; font-size:38px; fill:#cdd6ea; }
+      .small { font-family:'Segoe UI','Trebuchet MS',sans-serif; font-size:34px; fill:#b5c3dd; }
+      .micro { font-family:'Segoe UI','Trebuchet MS',sans-serif; font-size:30px; fill:#9eafcf; }
+      .code { font-family:Consolas,'Cascadia Mono','Courier New',monospace; font-size:38px; fill:#9ce8df; }
+      .codeSmall { font-family:Consolas,'Cascadia Mono','Courier New',monospace; font-size:34px; fill:#8fd9d5; }
+      .stage { fill:#121b2b; stroke:#7fe2d4; stroke-opacity:0.52; stroke-width:3; rx:22; }
+      .stageGold { fill:#171422; stroke:#d1a763; stroke-opacity:0.62; stroke-width:3; rx:22; }
+      .divider { stroke:#ffffff; stroke-opacity:0.08; stroke-width:3; }
+      .goldLine { stroke:#d1a763; stroke-opacity:0.65; stroke-width:3; }
+      .cyanLine { stroke:#7fe2d4; stroke-opacity:0.58; stroke-width:3; }
+      .accent { fill:url(#cyanGrad); }
+      .warn { fill:#ffcf80; }
+    </style>
+  </defs>
+
+  <rect width="11890" height="8410" fill="url(#bgGrad)"/>
+  <rect width="11890" height="8410" fill="url(#grid)"/>
+  <circle cx="10150" cy="820" r="1220" fill="#5b2f78" opacity="0.12"/>
+  <circle cx="9440" cy="6860" r="1320" fill="#167f86" opacity="0.08"/>
+  <circle cx="1400" cy="7350" r="1160" fill="#6c4a1d" opacity="0.07"/>
+
+  <rect class="panel" x="120" y="110" width="11650" height="700"/>
+  <text class="title" x="220" y="355">ORA_CORE_OS / GLK INDEX MASTER</text>
+  <text class="subtitle" x="224" y="470">A0 LANDSCAPE  |  GIBBERLINK KEY  |  WORLD MONETARY GOLD STABILITY PROFILE  |  VERSION 0.1.0</text>
+  <text class="code" x="6680" y="300">COMPILE PATH  :  JSON -&gt; HGOV -&gt; GL -&gt; GL_G -&gt; HASH -&gt; ROUTE</text>
+  <text class="codeSmall" x="6680" y="360">KEY FORMAT    :  GLK.WMGV.AU.MG.S1.V1</text>
+  <text class="codeSmall" x="6680" y="420">FORMULA       :  RAW -&gt; SMOOTH -&gt; GUARD -&gt; SETTLEMENT</text>
+  <text class="small" x="6680" y="485">Claim = low-volatility gold-backed settlement reference</text>
+  <text class="small" x="6680" y="535">Non-claim = zero volatility, risk-free monetary guarantee</text>
+  <text class="small" x="6680" y="585">Truth authority = HGOV + GL  |  GL_G publishes key, hash, route and stable state</text>
+
+  <rect class="panel" x="120" y="950" width="2480" height="2100"/>
+  <text class="panelTitle" x="220" y="1060">META / ANCHOR</text>
+  <line class="goldLine" x1="220" y1="1100" x2="2500" y2="1100"/>
+  <text class="code" x="220" y="1220">ID       GLK_GIBBERLINK_KEY_WORLD_MONETARY_GOLD</text>
+  <text class="code" x="220" y="1300">PROFILE  BACKEND_PRIMARY</text>
+  <text class="code" x="220" y="1380">LAYER    GL truth / GL_G index</text>
+  <text class="sectionLead" x="220" y="1510">Anchor</text>
+  <text class="body2" x="220" y="1580">- asset = official monetary gold</text>
+  <text class="body2" x="220" y="1640">- scope = world monetary gold value</text>
+  <text class="body2" x="220" y="1700">- unit = 1 mg AU_9999 canonical</text>
+  <text class="body2" x="220" y="1760">- numeraire = basket-neutral</text>
+  <text class="sectionLead" x="220" y="1890">Objective</text>
+  <text class="body2" x="220" y="1960">- stable settlement reference</text>
+  <text class="body2" x="220" y="2020">- bounded publication step</text>
+  <text class="body2" x="220" y="2080">- explicit uncertainty retention</text>
+  <text class="body2" x="220" y="2140">- auditable routing and hash</text>
+  <text class="sectionLead" x="220" y="2270">Axioms</text>
+  <text class="body2" x="220" y="2340">- no publish without quorum</text>
+  <text class="body2" x="220" y="2400">- no stable cache on unresolved high risk</text>
+  <text class="body2" x="220" y="2460">- no prose inside canonical key payload</text>
+  <text class="body2" x="220" y="2520">- freeze previous value on governance fail</text>
+  <text class="small" x="220" y="2660">GLK is a profile, not a fourth language. It lives above GPV2, through GL + GL_G.</text>
+
+  <rect class="panel" x="2720" y="950" width="5450" height="2100"/>
+  <text class="panelTitle" x="2820" y="1060">CANONICAL VALUE ENGINE</text>
+  <line class="goldLine" x1="2820" y1="1100" x2="8070" y2="1100"/>
+
+  <rect class="stageGold" x="2870" y="1240" width="700" height="520"/>
+  <text class="panelTitle" x="3060" y="1380">WMGV</text>
+  <text class="body2" x="2920" y="1495">official monetary gold</text>
+  <text class="body2" x="2920" y="1555">stock * gold fix ref</text>
+
+  <rect class="stage" x="3720" y="1240" width="700" height="520"/>
+  <text class="panelTitle" x="3925" y="1380">FX</text>
+  <text class="body2" x="3770" y="1495">basket neutralizer</text>
+  <text class="body2" x="3770" y="1555">avoid single fiat bias</text>
+
+  <rect class="stageGold" x="4570" y="1240" width="700" height="520"/>
+  <text class="panelTitle" x="4710" y="1380">SMOOTH</text>
+  <text class="body2" x="4620" y="1495">0.25 * EMA_30</text>
+  <text class="body2" x="4620" y="1555">0.75 * EMA_180</text>
+
+  <rect class="stage" x="5420" y="1240" width="700" height="520"/>
+  <text class="panelTitle" x="5590" y="1380">GUARD</text>
+  <text class="body2" x="5470" y="1495">clamp to previous</text>
+  <text class="body2" x="5470" y="1555">publish range 0.99 / 1.01</text>
+
+  <rect class="stageGold" x="6270" y="1240" width="700" height="520"/>
+  <text class="panelTitle" x="6420" y="1380">SETTLE</text>
+  <text class="body2" x="6320" y="1495">publish if HGOV pass</text>
+  <text class="body2" x="6320" y="1555">else freeze GLK_PREV</text>
+
+  <rect class="stage" x="7120" y="1240" width="820" height="520"/>
+  <text class="panelTitle" x="7310" y="1380">HASH / ROUTE</text>
+  <text class="body2" x="7170" y="1495">ID:VERSION:HASH</text>
+  <text class="body2" x="7170" y="1555">cache + audit + dispatch</text>
+
+  <line class="cyanLine" x1="3570" y1="1500" x2="3720" y2="1500"/>
+  <line class="cyanLine" x1="4420" y1="1500" x2="4570" y2="1500"/>
+  <line class="cyanLine" x1="5270" y1="1500" x2="5420" y2="1500"/>
+  <line class="cyanLine" x1="6120" y1="1500" x2="6270" y2="1500"/>
+  <line class="cyanLine" x1="6970" y1="1500" x2="7120" y2="1500"/>
+
+  <text class="sectionLead" x="2870" y="1920">Operational rules</text>
+  <text class="body2" x="2870" y="1990">- no canonical intraday repricing</text>
+  <text class="body2" x="2870" y="2050">- no stable publish if source quorum is false</text>
+  <text class="body2" x="2870" y="2110">- no stable route if risk is HIGH or CRITICAL unresolved</text>
+  <text class="body2" x="2870" y="2170">- same canonical input must yield same IDX and same HASH</text>
+  <text class="body2" x="2870" y="2230">- uncertainty survives the path via STAT or TAG</text>
+
+  <rect class="panel" x="8290" y="950" width="3480" height="2100"/>
+  <text class="panelTitle" x="8390" y="1060">KEY ANATOMY / CLAIMS</text>
+  <line class="goldLine" x1="8390" y1="1100" x2="11670" y2="1100"/>
+  <text class="sectionLead" x="8390" y="1230">Canonical key</text>
+  <text class="code" x="8390" y="1320">GLK.WMGV.AU.MG.S1.V1</text>
+  <text class="body2" x="8390" y="1420">GLK   = Gibberlink Key family</text>
+  <text class="body2" x="8390" y="1480">WMGV  = world monetary gold value</text>
+  <text class="body2" x="8390" y="1540">AU    = gold anchor</text>
+  <text class="body2" x="8390" y="1600">MG    = mg unit</text>
+  <text class="body2" x="8390" y="1660">S1    = stability profile</text>
+  <text class="body2" x="8390" y="1720">V1    = publication version</text>
+  <text class="sectionLead" x="8390" y="1860">Allowed claim</text>
+  <text class="body2" x="8390" y="1930">- gold-backed low-volatility settlement reference</text>
+  <text class="body2" x="8390" y="1990">- bounded and governed monetary index</text>
+  <text class="sectionLead" x="8390" y="2130">Forbidden claim</text>
+  <text class="body2" x="8390" y="2200">- zero-volatility currency</text>
+  <text class="body2" x="8390" y="2260">- risk-free guarantee</text>
+  <text class="body2" x="8390" y="2320">- always stable under every condition</text>
+  <text class="small" x="8390" y="2460">Correct promise: stable, bounded, auditable, more robust than raw spot.</text>
+
+  <rect class="panel" x="120" y="3200" width="3920" height="5000"/>
+  <text class="panelTitle" x="220" y="3310">FORMULA / JSON INPUT</text>
+  <line class="goldLine" x1="220" y1="3350" x2="3940" y2="3350"/>
+  <text class="sectionLead" x="220" y="3490">Canonical formula</text>
+  <text class="codeSmall" x="220" y="3600">WMGV_t = OFFICIAL_MONETARY_GOLD_TROY_OZ_t * GOLD_FIX_REF_t</text>
+  <text class="codeSmall" x="220" y="3680">GLK_RAW_t = (WMGV_t / GLK_SUPPLY_REF) * FX_BASKET_NEUTRAL_t</text>
+  <text class="codeSmall" x="220" y="3760">GLK_SMOOTH_t = (0.25 * EMA_30(GLK_RAW_t)) + (0.75 * EMA_180(GLK_RAW_t))</text>
+  <text class="codeSmall" x="220" y="3840">GLK_GUARD_t = clamp(GLK_SMOOTH_t, GLK_PREV * 0.99, GLK_PREV * 1.01)</text>
+  <text class="codeSmall" x="220" y="3920">GLK_SETTLEMENT_t = if HGOV_PASS and SOURCE_QUORUM then GLK_GUARD_t else GLK_PREV</text>
+
+  <text class="sectionLead" x="220" y="4100">Reading</text>
+  <text class="body2" x="220" y="4180">- raw follows theory</text>
+  <text class="body2" x="220" y="4240">- smooth absorbs market shock</text>
+  <text class="body2" x="220" y="4300">- guard limits settlement jump</text>
+  <text class="body2" x="220" y="4360">- final publish freezes on governance or source failure</text>
+
+  <text class="sectionLead" x="220" y="4560">Minimal JSON input</text>
+  <rect class="stage" x="220" y="4620" width="3670" height="1780"/>
+  <text class="codeSmall" x="300" y="4740">{</text>
+  <text class="codeSmall" x="380" y="4820">"GLK_INPUT": {</text>
+  <text class="codeSmall" x="460" y="4900">"official_monetary_gold_troy_oz": 0,</text>
+  <text class="codeSmall" x="460" y="4980">"gold_fix_ref": 0,</text>
+  <text class="codeSmall" x="460" y="5060">"fx_basket_neutral": 1.0,</text>
+  <text class="codeSmall" x="460" y="5140">"glk_supply_ref": 0,</text>
+  <text class="codeSmall" x="460" y="5220">"prev_settlement": 0,</text>
+  <text class="codeSmall" x="460" y="5300">"source_quorum": false,</text>
+  <text class="codeSmall" x="460" y="5380">"hgov_pass": false,</text>
+  <text class="codeSmall" x="460" y="5460">"publish_cycle": "DAILY_CLOSE"</text>
+  <text class="codeSmall" x="380" y="5540">}</text>
+  <text class="codeSmall" x="300" y="5620">}</text>
+
+  <text class="sectionLead" x="220" y="5850">Settlement posture</text>
+  <text class="body2" x="220" y="5930">- daily close publish</text>
+  <text class="body2" x="220" y="5990">- no intraday canonical market tick</text>
+  <text class="body2" x="220" y="6050">- monthly review of corridor and source set</text>
+  <text class="body2" x="220" y="6110">- fixed reference supply unless governance changes it</text>
+
+  <text class="small" x="220" y="6320">If the market is noisy, GLK settles slower than spot. If governance is uncertain, GLK freezes.</text>
+
+  <rect class="panel" x="4160" y="3200" width="3640" height="2380"/>
+  <text class="panelTitle" x="4260" y="3310">GL CONTRACT</text>
+  <line class="goldLine" x1="4260" y1="3350" x2="7700" y2="3350"/>
+  <text class="codeSmall" x="4260" y="3480">LIMIT(GLK.anchor,official_monetary_gold_only)</text>
+  <text class="codeSmall" x="4260" y="3560">LIMIT(GLK.publish_interval,daily_close)</text>
+  <text class="codeSmall" x="4260" y="3640">LIMIT(GLK.max_step_pct,1.0)</text>
+  <text class="codeSmall" x="4260" y="3720">ASSERT(GLK.base_unit,mg_AU9999)</text>
+  <text class="codeSmall" x="4260" y="3800">ASSERT(GLK.fx_mode,basket_neutral)</text>
+  <text class="codeSmall" x="4260" y="3880">ASSERT(GLK.smoothing,ema30_ema180)</text>
+  <text class="codeSmall" x="4260" y="3960">FACT(GLK.scope,world_monetary_gold_value)</text>
+  <text class="codeSmall" x="4260" y="4040">FACT(GLK.index_mode,smoothed_bounded_settlement)</text>
+  <text class="codeSmall" x="4260" y="4120">SOURCE(GLK.reserve_feed,RESERVE_FEED_A)</text>
+  <text class="codeSmall" x="4260" y="4200">SOURCE(GLK.price_feed,PRICE_FEED_A)</text>
+  <text class="codeSmall" x="4260" y="4280">REF(GLK.key,GLK.WMGV.AU.MG.S1.V1)</text>
+  <text class="codeSmall" x="4260" y="4360">STATE(GLK.status,stable_reference_candidate)</text>
+  <text class="codeSmall" x="4260" y="4440">RISK(GLK.market,residual_low)</text>
+  <text class="codeSmall" x="4260" y="4520">UNSURE(GLK.live_tick,intraday_noise,0.35)</text>
+  <text class="body2" x="4260" y="4680">GL carries truth, limits, provenance, uncertainty and risk.</text>
+  <text class="body2" x="4260" y="4740">It decides what the key is allowed to claim before compression.</text>
+
+  <rect class="panel" x="4160" y="5820" width="3640" height="2380"/>
+  <text class="panelTitle" x="4260" y="5930">GL_G CONTRACT</text>
+  <line class="goldLine" x1="4260" y1="5970" x2="7700" y2="5970"/>
+  <text class="codeSmall" x="4260" y="6100">IDX(GLK.WMGV.AU.MG.S1.V1)</text>
+  <text class="codeSmall" x="4260" y="6180">TAG(ns=ASSET,name=GOLD)</text>
+  <text class="codeSmall" x="4260" y="6260">TAG(ns=SCOPE,name=WORLD_MONETARY)</text>
+  <text class="codeSmall" x="4260" y="6340">TAG(ns=UNIT,name=MG_AU9999)</text>
+  <text class="codeSmall" x="4260" y="6420">TAG(ns=MODEL,name=SMOOTHED_BOUNDED)</text>
+  <text class="codeSmall" x="4260" y="6500">STAT(risk=LOW)</text>
+  <text class="codeSmall" x="4260" y="6580">MAP(src=WMGV,dst=GLK_SETTLEMENT)</text>
+  <text class="codeSmall" x="4260" y="6660">ROUTE(module=MONETARY_INDEX,mode=STABLE_REF)</text>
+  <text class="codeSmall" x="4260" y="6740">PACK(name=publish,val=DAILY_CLOSE)</text>
+  <text class="codeSmall" x="4260" y="6820">LINK(key=anchor,target=OFFICIAL_MONETARY_GOLD)</text>
+  <text class="codeSmall" x="4260" y="6900">HASH(algo=SHA256,val=ID:VERSION:HASH)</text>
+  <text class="body2" x="4260" y="7060">GL_G publishes the compact backend payload.</text>
+  <text class="body2" x="4260" y="7120">No prose. ASCII safe. Risk must survive in STAT or TAG.</text>
+
+  <rect class="panel" x="7920" y="3200" width="3850" height="2380"/>
+  <text class="panelTitle" x="8020" y="3310">HGOV / VALIDATION GATES</text>
+  <line class="goldLine" x1="8020" y1="3350" x2="11670" y2="3350"/>
+  <text class="codeSmall" x="8020" y="3480">CHECK_01  source_quorum == true</text>
+  <text class="codeSmall" x="8020" y="3560">CHECK_02  hgov_pass == true</text>
+  <text class="codeSmall" x="8020" y="3640">CHECK_03  risk not HIGH or CRITICAL unresolved</text>
+  <text class="codeSmall" x="8020" y="3720">CHECK_04  deterministic IDX generation</text>
+  <text class="codeSmall" x="8020" y="3800">CHECK_05  deterministic HASH generation</text>
+  <text class="codeSmall" x="8020" y="3880">CHECK_06  bounded publish step &lt;= 1 pct</text>
+  <text class="codeSmall" x="8020" y="3960">CHECK_07  no loss of LIMIT ASSERT RISK UNSURE</text>
+  <text class="codeSmall" x="8020" y="4040">CHECK_08  roundtrip GL -&gt; GL_G -&gt; GL sufficient</text>
+  <text class="codeSmall" x="8020" y="4120">CHECK_09  no stable route on failed governance</text>
+  <text class="codeSmall" x="8020" y="4200">CHECK_10  freeze previous settlement on failure</text>
+  <text class="body2" x="8020" y="4360">This is where the monetary posture becomes credible.</text>
+  <text class="body2" x="8020" y="4420">Without gates, gold anchor alone does not create stability.</text>
+
+  <rect class="panel" x="7920" y="5820" width="3850" height="2380"/>
+  <text class="panelTitle" x="8020" y="5930">MONETARY POSITIONING</text>
+  <line class="goldLine" x1="8020" y1="5970" x2="11670" y2="5970"/>
+  <text class="sectionLead" x="8020" y="6110">What GLK is</text>
+  <text class="body2" x="8020" y="6190">- a governed monetary index key</text>
+  <text class="body2" x="8020" y="6250">- a backend settlement reference</text>
+  <text class="body2" x="8020" y="6310">- an auditable gold-linked publication profile</text>
+  <text class="sectionLead" x="8020" y="6470">What GLK is not</text>
+  <text class="body2" x="8020" y="6550">- a magical volatility eraser</text>
+  <text class="body2" x="8020" y="6610">- a free-floating meme index</text>
+  <text class="body2" x="8020" y="6670">- a source-independent truth claim</text>
+  <text class="sectionLead" x="8020" y="6830">Correct sentence</text>
+  <text class="body2" x="8020" y="6910">GLK gives a stable, bounded and auditable monetary reference</text>
+  <text class="body2" x="8020" y="6970">derived from world monetary gold value, not a promise of zero volatility.</text>
+  <text class="small" x="8020" y="7150">Use this profile for spec, poster, backend key registry, routing and future treasury-grade audit flows.</text>
+
+  <text class="small" x="220" y="8310">DUO COEUR | GLK binds gold anchor, governance, smoothing, bounded settlement and backend audit into one canonical index key.</text>
+</svg>
+

@@ -27,14 +27,18 @@ Cela implique:
 
 - `ORA_CORE_OS_GPV2_BACKEND_ANALYSE.md`
   Analyse critique, angles morts et corrections retenues.
+- `ORA_CORE_OS_GPV2_BACKEND_INTEGRATION.md`
+  Notes d'integration runtime backend.
 - `ORA_CORE_OS_GPV2_BACKEND_WhitePaper.md`
   White paper de la version backend.
-- `ORA_CORE_OS_GPV2_BACKEND_SPEC_V2_3.json`
+- `ORA_CORE_OS_GPV2_BACKEND_SPEC_V2_3_PUBLIC.json`
   Spec machine corrigee et bonnifiee.
 - `ORA_CORE_OS_GPV2_GLYPH_UI_NOTE.md`
   Note sur les visuels, les glyphes et ce qui doit rester non normatif.
-- `ORA_CORE_OS_GPV2_MODULE_PHARE.md`
-  Positionnement de `GPV2` comme second module phare en paire avec `HGOV`.
+- `ORA_CORE_OS_GLK_GIBBERLINK_KEY_GOLD_SPEC.md`
+  Profil `GLK` pour un index backend adosse a la valeur de l'or monetaire mondial.
+- `ORA_CORE_OS_GLK_GIBBERLINK_KEY_GOLD_PROFILE.json`
+  Profil machine `GLK` pour cle, formule, hash et routage.
 
 ## Ce qui change par rapport a la version fournie
 
@@ -44,3 +48,4 @@ Cela implique:
 - hash et cache durcis
 - separation nette entre semantique executable et symbolique glyphique
 - ajout d'un contrat de perte, de roundtrip et de provenance
+- ajout d'un profil `GLK` pour un index monetaire adosse a l'or avec stabilisation gouvernee
