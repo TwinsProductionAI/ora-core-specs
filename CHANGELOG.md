@@ -1,4 +1,9 @@
-﻿# Changelog
+# Changelog
+
+## 2026-04-12
+- Added the first public technical publication bundle for `H-NERONS`.
+- Added public H-NERONS kernel, white paper, integration note, PDF white paper and public JSON spec.
+- Updated repository scope and manifest to include H-NERONS specifications.
 
 ## 2026-04-10
 - Added the first public technical publication bundle for `ORCHESTRATEUR_LLM`.

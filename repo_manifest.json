@@ -1,8 +1,9 @@
-﻿{
+{
   "repo_name": "ora-core-specs",
   "license": "Apache-2.0",
   "status": "publication_ready_local_bundle",
   "public_scope": [
+    "H-NERONS specs",
     "ORCHESTRATEUR_LLM specs",
     "HGOV specs",
     "GPV2 specs",

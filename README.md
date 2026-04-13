@@ -1,15 +1,23 @@
-﻿# ora-core-specs
+# ora-core-specs
 
 Public technical specifications for the latest Ora_Core_Os modules.
 
 ## Scope
 
 This repository is the publication-ready public bundle for:
+- H-NERONS factual governance specifications
 - ORCHESTRATEUR_LLM orchestration specifications
 - HGOV epistemic governance specifications
 - GPV2 backend and semantic transport specifications
 - glyph and Rosetta-related technical notes that are useful for implementation
 - public whitepapers and integration notes
+
+## Module directories
+
+- `specs/h-nerons`
+- `specs/orchestrateur-llm`
+- `specs/hgov`
+- `specs/gpv2`
 
 ## Public/private boundary
 
