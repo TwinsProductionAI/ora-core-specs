@@ -1,24 +1,32 @@
-﻿# Manual GitHub Publication Steps
+# Publication Status
 
-This machine does not currently expose `git` in PATH and no network publication was performed from this bundle.
+This repository is already public as `TwinsProductionAI/ora-core-specs`.
+The old manual publication checklist is archived by this note so visitors do not think the repo is unpublished.
 
-## Recommended repo names
+## Current Role
 
-- `ora-core-runtime`
-- `ora-core-specs`
+`ora-core-specs` is the public specification and schemas layer for ORA Core.
+It should stay separate from runtime code and private delivery material.
 
-## Publish steps
+## Public Boundary
 
-1. Initialize git in the folder.
-2. Create the GitHub repository with the same name.
-3. Add the remote.
-4. Commit the files.
-5. Push `main`.
+Keep public here:
 
-## Boundary to preserve
+- neutral schemas
+- public specs
+- examples without private client data
+- docs that describe contracts or installation
 
-Do not publish:
-- `ORA_CHATGPT_PROJECTS_PME_PACK_V1`
+Do not publish here:
+
 - client delivery packs
 - private prompts
 - private commercial assets
+- unscoped tenant memory
+- raw personal identifiers
+
+## Related Repositories
+
+- `TwinsProductionAI/Coeur_ORA_GrenaPrompt_repo` for the canonical ORA Core OS docs.
+- `TwinsProductionAI/ora-core-runtime` for runtime code.
+- `TwinsProductionAI/ora-core-rag` for local retrieval and route-gated RAG.
