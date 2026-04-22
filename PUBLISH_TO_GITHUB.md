@@ -27,6 +27,6 @@ Do not publish here:
 
 ## Related Repositories
 
-- `TwinsProductionAI/Coeur_ORA_GrenaPrompt_repo` for the canonical ORA Core OS docs.
+- `TwinsProductionAI/ora-core-os` for the canonical ORA Core OS docs.
 - `TwinsProductionAI/ora-core-runtime` for runtime code.
 - `TwinsProductionAI/ora-core-rag` for local retrieval and route-gated RAG.
