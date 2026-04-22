@@ -6,7 +6,7 @@ This repository is the specification layer of the public ORA Core map. It is for
 
 ## Repository Role
 
-Read this after [ora-core-os](https://github.com/TwinsProductionAI/Coeur_ORA_GrenaPrompt_repo) when you need the technical documents behind the architecture.
+Read this after [ora-core-os](https://github.com/TwinsProductionAI/ora-core-os) when you need the technical documents behind the architecture.
 
 | Public order | Repository role |
 | ---: | --- |
@@ -34,11 +34,11 @@ This repository is the publication-ready public bundle for:
 
 | Order | Repository | Role |
 | ---: | --- | --- |
-| 1 | [ora-core-os](https://github.com/TwinsProductionAI/Coeur_ORA_GrenaPrompt_repo) | Architecture and canonical module order. |
+| 1 | [ora-core-os](https://github.com/TwinsProductionAI/ora-core-os) | Architecture and canonical module order. |
 | 2 | [ora-core-runtime](https://github.com/TwinsProductionAI/ora-core-runtime) | Runnable runtime and tests. |
 | 3 | [ora-core-rag](https://github.com/TwinsProductionAI/ora-core-rag) | Retrieval layer and RAG Governor. |
 | 4 | `ora-core-specs` | Technical specifications and white papers. |
-| 5 | [grenaprompt-linked](https://github.com/TwinsProductionAI/grenapromptlinked-v1) | GL/GPL/GL_G language layer. |
+| 5 | [grenaprompt-linked](https://github.com/TwinsProductionAI/grenaprompt-linked) | GL/GPL/GL_G language layer. |
 
 ## Public/Private Boundary
 
