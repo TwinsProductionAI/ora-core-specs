@@ -20,6 +20,7 @@ This repository is the publication-ready public bundle for:
 - ORCHESTRATEUR_LLM orchestration specifications
 - HGOV epistemic governance specifications
 - GPV2 backend and semantic transport specifications
+- modular architecture white papers for ORA Core OS and ORA RAG
 - glyph and Rosetta-related technical notes useful for implementation
 - public white papers and integration notes
 
@@ -29,6 +30,7 @@ This repository is the publication-ready public bundle for:
 - `specs/orchestrateur-llm`
 - `specs/hgov`
 - `specs/gpv2`
+- `specs/modular-architecture`
 
 ## Public Repository Map
 
