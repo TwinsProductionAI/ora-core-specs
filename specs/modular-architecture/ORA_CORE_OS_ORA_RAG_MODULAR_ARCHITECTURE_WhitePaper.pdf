@@ -1,0 +1,382 @@
+%PDF-1.4
+%ASCII
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 6 /Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 15 0 R /F2 16 0 R /F3 17 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3974 >>
+stream
+BT /F2 10 Tf 50 815 Td (ORA White Paper) Tj ET
+BT /F2 9 Tf 500 30 Td (1/6) Tj ET
+BT /F3 18 Tf 50 790 Td (ORA Core OS et ORA RAG) Tj ET
+BT /F2 14 Tf 50 764 Td (Architecture modulaire, compilation de besoin et gouvernance documentaire) Tj ET
+BT /F3 18 Tf 50 734 Td (ORA Core OS et ORA RAG) Tj ET
+BT /F2 14 Tf 50 700 Td (White Paper) Tj ET
+BT /F2 12 Tf 50 670 Td (Architecture modulaire, compilation de besoin et gouvernance documentaire) Tj ET
+BT /F2 14 Tf 50 644 Td (1. R\351sum\351 ex\351cutif) Tj ET
+BT /F1 10 Tf 50 614 Td (L?architecture d?ORA Core OS repose sur une id\351e simple mais structurante: un agent n?a pas) Tj ET
+BT /F1 10 Tf 50 600 Td (besoin d?\352tre uniforme pour \352tre coh\351rent, il a besoin d?\352tre gouvernable.) Tj ET
+BT /F1 10 Tf 50 578 Td (Le compilateur de besoin en langage naturel n?est pas un accessoire. Il sert \340 transformer) Tj ET
+BT /F1 10 Tf 50 564 Td (une intention humaine, souvent floue, en une configuration d?agent stable, contr\364l\351e et) Tj ET
+BT /F1 10 Tf 50 550 Td (adapt\351e au niveau de risque, de complexit\351 et d?autonomie attendu.) Tj ET
+BT /F1 10 Tf 50 528 Td (L?int\351r\352t majeur du syst\350me est la s\351paration entre un noyau obligatoire de fiabilit\351, des) Tj ET
+BT /F1 10 Tf 50 514 Td (modules de capacit\351 stables et des couches optionnelles ou identitaires. Cette s\351paration) Tj ET
+BT /F1 10 Tf 50 500 Td (permet de conserver la continuit\351 d?Ora tout en retirant, selon les contextes, les briques) Tj ET
+BT /F1 10 Tf 50 486 Td (trop abstraites, trop denses ou trop frictionnelles.) Tj ET
+BT /F1 10 Tf 50 464 Td (Ce document d\351fend la th\350se suivante: la coh\351rence du syst\350me ne r\351side pas seulement dans) Tj ET
+BT /F1 10 Tf 50 450 Td (l?agent Ora lui-m\352me, mais dans la capacit\351 d?ORA Core OS \340 produire des variantes) Tj ET
+BT /F1 10 Tf 50 436 Td (disciplin\351es du m\352me agent \340 partir d?un canon partag\351, d?un protocole de compilation de) Tj ET
+BT /F1 10 Tf 50 422 Td (besoin et d?une gouvernance modulaire, tout en articulant ORA RAG comme couche documentaire) Tj ET
+BT /F1 10 Tf 50 408 Td (gouvern\351e.) Tj ET
+BT /F2 14 Tf 50 386 Td (2. Contexte et probl\350me) Tj ET
+BT /F1 10 Tf 50 356 Td (Beaucoup d?architectures d?agents \351chouent pour une raison structurelle: elles confondent) Tj ET
+BT /F1 10 Tf 50 342 Td (personnalit\351, logique m\351tier, r\350gles de s\351curit\351, m\351moire, outils, pipeline documentaire et) Tj ET
+BT /F1 10 Tf 50 328 Td (restitution dans une seule couche opaque.) Tj ET
+BT /F1 10 Tf 50 306 Td (Cette confusion produit plusieurs sympt\364mes:) Tj ET
+BT /F1 10 Tf 50 284 Td (-) Tj ET
+BT /F1 10 Tf 58 284 Td (difficult\351 \340 expliquer pourquoi l?agent r\351pond comme il r\351pond) Tj ET
+BT /F1 10 Tf 50 270 Td (-) Tj ET
+BT /F1 10 Tf 58 270 Td (difficult\351 \340 retirer une capacit\351 sans casser le reste) Tj ET
+BT /F1 10 Tf 50 256 Td (-) Tj ET
+BT /F1 10 Tf 58 256 Td (dette de gouvernance) Tj ET
+BT /F1 10 Tf 50 242 Td (-) Tj ET
+BT /F1 10 Tf 58 242 Td (surcouche identitaire trop forte dans certains contextes) Tj ET
+BT /F1 10 Tf 50 228 Td (-) Tj ET
+BT /F1 10 Tf 58 228 Td (friction lors des changements de profil) Tj ET
+BT /F1 10 Tf 50 206 Td (L?architecture ici \351tudi\351e r\351pond \340 ce probl\350me par une hypoth\350se inverse: il faut d?abord) Tj ET
+BT /F1 10 Tf 50 192 Td (construire un canon, ensuite des modules sp\351cialis\351s, puis un m\351canisme de s\351lection et de) Tj ET
+BT /F1 10 Tf 50 178 Td (composition fond\351 sur le besoin naturel formul\351 par l?utilisateur ou par le contexte) Tj ET
+BT /F1 10 Tf 50 164 Td (documentaire.) Tj ET
+BT /F2 14 Tf 50 142 Td (3. Th\350se centrale) Tj ET
+BT /F1 10 Tf 50 112 Td (Un agent gouvern\351 ne doit pas \352tre seulement intelligent. Il doit \352tre configurable sans) Tj ET
+BT /F1 10 Tf 50 98 Td (devenir incoh\351rent.) Tj ET
+BT /F1 10 Tf 50 76 Td (La modularit\351 ne sert donc pas d?abord la vari\351t\351 esth\351tique; elle sert:) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 15 0 R /F2 16 0 R /F3 17 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 3519 >>
+stream
+BT /F2 10 Tf 50 815 Td (ORA White Paper) Tj ET
+BT /F2 9 Tf 500 30 Td (2/6) Tj ET
+BT /F1 10 Tf 50 790 Td (-) Tj ET
+BT /F1 10 Tf 58 790 Td (la stabilit\351) Tj ET
+BT /F1 10 Tf 50 776 Td (-) Tj ET
+BT /F1 10 Tf 58 776 Td (la lisibilit\351 du risque) Tj ET
+BT /F1 10 Tf 50 762 Td (-) Tj ET
+BT /F1 10 Tf 58 762 Td (l?ajustement ma\356tris\351 des capacit\351s) Tj ET
+BT /F2 14 Tf 50 740 Td (4. Lecture de l?architecture observ\351e) Tj ET
+BT /F1 10 Tf 50 710 Td (L?architecture examin\351e montre une s\351paration nette entre:) Tj ET
+BT /F1 10 Tf 50 688 Td (-) Tj ET
+BT /F1 10 Tf 58 688 Td (le registre canonique) Tj ET
+BT /F1 10 Tf 50 674 Td (-) Tj ET
+BT /F1 10 Tf 58 674 Td (le profil ma\356tre) Tj ET
+BT /F1 10 Tf 50 660 Td (-) Tj ET
+BT /F1 10 Tf 58 660 Td (les modules de gouvernance et de raisonnement) Tj ET
+BT /F1 10 Tf 50 646 Td (-) Tj ET
+BT /F1 10 Tf 58 646 Td (les couches de traduction Rosetta) Tj ET
+BT /F1 10 Tf 50 632 Td (-) Tj ET
+BT /F1 10 Tf 58 632 Td (la m\351moire) Tj ET
+BT /F1 10 Tf 50 618 Td (-) Tj ET
+BT /F1 10 Tf 58 618 Td (les skills sp\351cialis\351s) Tj ET
+BT /F1 10 Tf 50 604 Td (-) Tj ET
+BT /F1 10 Tf 58 604 Td (la couche RAG gouvern\351e) Tj ET
+BT /F1 10 Tf 50 582 Td (Le registre fixe ce qui est officiellement actif, normalis\351, en durcissement ou annex\351. Le) Tj ET
+BT /F1 10 Tf 50 568 Td (profil ma\356tre d\351crit le cadre identitaire et le style de fonctionnement. Les modules tels) Tj ET
+BT /F1 10 Tf 50 554 Td (que `PRIMORDIA`, `RIME`, `GPL` et `JSON_LOCK` distribuent ensuite des r\364les diff\351rents:) Tj ET
+BT /F1 10 Tf 50 540 Td (arbitrer, falsifier, compiler et verrouiller la sortie.) Tj ET
+BT /F1 10 Tf 50 518 Td (ORA RAG s?ins\350re dans cette structure non comme une extension d\351corative, mais comme une) Tj ET
+BT /F1 10 Tf 50 504 Td (couche documentaire gouvern\351e. Son r\364le n?est pas seulement de d\351couper ou retrouver des) Tj ET
+BT /F1 10 Tf 50 490 Td (fragments, mais de pr\351server:) Tj ET
+BT /F1 10 Tf 50 468 Td (-) Tj ET
+BT /F1 10 Tf 58 468 Td (la continuit\351 canonique) Tj ET
+BT /F1 10 Tf 50 454 Td (-) Tj ET
+BT /F1 10 Tf 58 454 Td (l?essence) Tj ET
+BT /F1 10 Tf 50 440 Td (-) Tj ET
+BT /F1 10 Tf 58 440 Td (les contrats) Tj ET
+BT /F1 10 Tf 50 426 Td (-) Tj ET
+BT /F1 10 Tf 58 426 Td (les m\351tadonn\351es de routage) Tj ET
+BT /F2 14 Tf 50 404 Td (5. Les couches structurantes) Tj ET
+BT /F2 12 Tf 50 374 Td (5.1 Registre canonique) Tj ET
+BT /F1 10 Tf 50 348 Td (Source d?autorit\351 sur les blocs int\351gr\351s, les statuts, les r\350gles de migration et la) Tj ET
+BT /F1 10 Tf 50 334 Td (fronti\350re entre le c?ur et l?annexe.) Tj ET
+BT /F2 12 Tf 50 312 Td (5.2 Profil ma\356tre) Tj ET
+BT /F1 10 Tf 50 286 Td (Cadre identitaire, ton, principes \351thiques, \351conomie de sortie et pr\351f\351rences transversales.) Tj ET
+BT /F2 12 Tf 50 264 Td (5.3 Modules de gouvernance) Tj ET
+BT /F1 10 Tf 50 238 Td (Arbitrage, contr\364le de coh\351rence, compilation de besoin, s\351rialisation stricte, respiration) Tj ET
+BT /F1 10 Tf 50 224 Td (du traitement.) Tj ET
+BT /F2 12 Tf 50 202 Td (5.4 M\351moire) Tj ET
+BT /F1 10 Tf 50 176 Td (Continuit\351 durable avec provenance, confiance, conflit et lignage au lieu d?un simple) Tj ET
+BT /F1 10 Tf 50 162 Td (empilement de souvenirs.) Tj ET
+BT /F2 12 Tf 50 140 Td (5.5 Skills) Tj ET
+BT /F1 10 Tf 50 114 Td (Op\351rateurs sp\351cialis\351s qui rendent certaines couches activables par cas d?usage plut\364t) Tj ET
+BT /F1 10 Tf 50 100 Td (qu?omnipr\351sentes.) Tj ET
+BT /F2 12 Tf 50 78 Td (5.6 ORA RAG) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 15 0 R /F2 16 0 R /F3 17 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 4286 >>
+stream
+BT /F2 10 Tf 50 815 Td (ORA White Paper) Tj ET
+BT /F2 9 Tf 500 30 Td (3/6) Tj ET
+BT /F1 10 Tf 50 790 Td (Segmentation gouvern\351e, liaison d?essence, contrats, contexte de chunk et m\351tadonn\351es de) Tj ET
+BT /F1 10 Tf 50 776 Td (retrieval stables.) Tj ET
+BT /F2 14 Tf 50 754 Td (6. Pourquoi le compilateur de besoin est n\351cessaire) Tj ET
+BT /F1 10 Tf 50 724 Td (Le compilateur de besoin en langage naturel r\351pond \340 une contrainte de terrain: un) Tj ET
+BT /F1 10 Tf 50 710 Td (utilisateur ne formule pas spontan\351ment son besoin en termes de modules, de contrats, de) Tj ET
+BT /F1 10 Tf 50 696 Td (niveaux de risque, de couches Rosetta ou de strat\351gie RAG. Il formule une intention, une) Tj ET
+BT /F1 10 Tf 50 682 Td (contrainte, une difficult\351, un p\351rim\350tre, ou un r\351sultat attendu.) Tj ET
+BT /F1 10 Tf 50 660 Td (Le compilateur sert donc d?interface de traduction entre deux mondes:) Tj ET
+BT /F1 10 Tf 50 638 Td (-) Tj ET
+BT /F1 10 Tf 58 638 Td (le langage humain du besoin) Tj ET
+BT /F1 10 Tf 50 624 Td (-) Tj ET
+BT /F1 10 Tf 58 624 Td (une architecture modulaire qui doit rester stable, explicable et disciplin\351e) Tj ET
+BT /F1 10 Tf 50 602 Td (Sans ce compilateur, l?assemblage des capacit\351s deviendrait artisanal et fragile. Avec lui,) Tj ET
+BT /F1 10 Tf 50 588 Td (la configuration devient une op\351ration gouvern\351e: on choisit un noyau, on active des modules) Tj ET
+BT /F1 10 Tf 50 574 Td (de capacit\351, on d\351sactive les briques qui cr\351ent de la friction, puis on obtient une) Tj ET
+BT /F1 10 Tf 50 560 Td (variante coh\351rente du syst\350me.) Tj ET
+BT /F2 14 Tf 50 538 Td (7. Classification canonique des modules) Tj ET
+BT /F1 10 Tf 50 508 Td (La lecture la plus exploitable du syst\350me conduit \340 trois classes de modules. Cette) Tj ET
+BT /F1 10 Tf 50 494 Td (classification a une fonction architecturale directe: elle d\351termine ce qui reste non) Tj ET
+BT /F1 10 Tf 50 480 Td (n\351gociable, ce qui s?active par domaine d?usage et ce qui doit rester optionnel.) Tj ET
+BT /F2 14 Tf 50 450 Td (8. Analyse du noyau obligatoire) Tj ET
+BT /F1 10 Tf 50 420 Td (Le noyau obligatoire est la partie la plus structurante du syst\350me. Il contient les briques) Tj ET
+BT /F1 10 Tf 50 406 Td (qui rendent l?agent explicable, pilotable et raisonnablement s\373r dans un environnement r\351el.) Tj ET
+BT /F1 10 Tf 50 384 Td (Le registre et le profil ma\356tre donnent la continuit\351. `GPL` transforme le besoin en plan) Tj ET
+BT /F1 10 Tf 50 370 Td (d?ex\351cution. `PRIMORDIA` arbitre, `RIME` falsifie et baisse la confiance si n\351cessaire.) Tj ET
+BT /F1 10 Tf 50 356 Td (`JSON_LOCK` prot\350ge les sorties machine. `MNEMOSYNC` emp\352che que la m\351moire devienne un) Tj ET
+BT /F1 10 Tf 50 342 Td (simulateur de v\351rit\351.) Tj ET
+BT /F1 10 Tf 50 320 Td (Ce noyau permet d?obtenir une forme de stabilit\351 sans imposer l?uniformit\351. Toutes les) Tj ET
+BT /F1 10 Tf 50 306 Td (variantes d\351riv\351es ne se ressemblent pas, mais elles partagent les m\352mes points de contr\364le.) Tj ET
+BT /F2 14 Tf 50 284 Td (9. Analyse des modules de capacit\351 stables) Tj ET
+BT /F1 10 Tf 50 254 Td (Les modules de capacit\351 stables constituent le vrai champ d?extension du syst\350me. Ils ne) Tj ET
+BT /F1 10 Tf 50 240 Td (sont pas universels, mais ils ont un domaine d?application suffisamment net pour \352tre) Tj ET
+BT /F1 10 Tf 50 226 Td (activ\351s proprement.) Tj ET
+BT /F1 10 Tf 50 204 Td (Le governor RAG et la r\351f\351rence de contrats RAG sont particuli\350rement forts, car ils) Tj ET
+BT /F1 10 Tf 50 190 Td (r\351pondent \340 un probl\350me fr\351quent dans les syst\350mes documentaires: transformer une base) Tj ET
+BT /F1 10 Tf 50 176 Td (textuelle en connaissance exploitable sans laisser le chunking red\351finir le sens ou la) Tj ET
+BT /F1 10 Tf 50 162 Td (canonicit\351.) Tj ET
+BT /F1 10 Tf 50 140 Td (Le traducteur Rosetta et les couches d?orchestration internes ont une valeur \351lev\351e dans des) Tj ET
+BT /F1 10 Tf 50 126 Td (syst\350mes plus avanc\351s, surtout lorsqu?il faut conserver une discipline de transformation, de) Tj ET
+BT /F1 10 Tf 50 112 Td (routage et de restitution entre plusieurs formes de sortie.) Tj ET
+BT /F2 14 Tf 50 90 Td (10. Analyse des modules optionnels ou identitaires) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 15 0 R /F2 16 0 R /F3 17 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 4531 >>
+stream
+BT /F2 10 Tf 50 815 Td (ORA White Paper) Tj ET
+BT /F2 9 Tf 500 30 Td (4/6) Tj ET
+BT /F1 10 Tf 50 790 Td (C?est ici que se joue une partie importante de la maturit\351 architecturale. Certaines briques) Tj ET
+BT /F1 10 Tf 50 776 Td (sont puissantes, inventives et coh\351rentes, mais elles ne doivent pas \352tre impos\351es \340 tous) Tj ET
+BT /F1 10 Tf 50 762 Td (les contextes.) Tj ET
+BT /F1 10 Tf 50 740 Td (Les couches les plus symboliques, expertes ou ambigu\353s sont pr\351cieuses comme laboratoire,) Tj ET
+BT /F1 10 Tf 50 726 Td (comme signature, ou comme mode de profondeur. Elles deviennent plus fragiles lorsqu?elles) Tj ET
+BT /F1 10 Tf 50 712 Td (sont inject\351es sans n\351cessit\351 dans un contexte qui demande surtout de la lisibilit\351.) Tj ET
+BT /F1 10 Tf 50 690 Td (La bonne d\351cision n?est donc pas de les nier. La bonne d\351cision est de les maintenir \340 la) Tj ET
+BT /F1 10 Tf 50 676 Td (p\351riph\351rie du parcours standard et de les activer seulement quand leur valeur est claire,) Tj ET
+BT /F1 10 Tf 50 662 Td (mesurable et assum\351e.) Tj ET
+BT /F2 14 Tf 50 640 Td (11. ORA Core OS et ORA RAG comme syst\350me complet) Tj ET
+BT /F1 10 Tf 50 610 Td (L?une des forces discr\350tes de l?ensemble est que la couche agentique et la couche) Tj ET
+BT /F1 10 Tf 50 596 Td (documentaire ne sont pas pens\351es s\351par\351ment. ORA Core OS gouverne la logique de l?agent; ORA) Tj ET
+BT /F1 10 Tf 50 582 Td (RAG gouverne la logique de la connaissance d\351coup\351e, li\351e, r\351sum\351e et rout\351e.) Tj ET
+BT /F1 10 Tf 50 560 Td (Cette articulation est importante. Dans beaucoup de syst\350mes, le retrieval arrive apr\350s coup) Tj ET
+BT /F1 10 Tf 50 546 Td (comme simple outil d?appoint. Ici, ORA RAG prolonge les m\352mes principes que le noyau:) Tj ET
+BT /F1 10 Tf 50 524 Td (-) Tj ET
+BT /F1 10 Tf 58 524 Td (canon) Tj ET
+BT /F1 10 Tf 50 510 Td (-) Tj ET
+BT /F1 10 Tf 58 510 Td (hi\351rarchie) Tj ET
+BT /F1 10 Tf 50 496 Td (-) Tj ET
+BT /F1 10 Tf 58 496 Td (prudence) Tj ET
+BT /F1 10 Tf 50 482 Td (-) Tj ET
+BT /F1 10 Tf 58 482 Td (pr\351servation de l?incertitude) Tj ET
+BT /F1 10 Tf 50 468 Td (-) Tj ET
+BT /F1 10 Tf 58 468 Td (refus de laisser une op\351ration technique red\351finir le sens) Tj ET
+BT /F1 10 Tf 50 446 Td (Le r\351sultat est une architecture compl\350te o\371 l?agent, la m\351moire, la compilation, la) Tj ET
+BT /F1 10 Tf 50 432 Td (restitution et la documentation retrieval-ready restent align\351s sur un m\352me cadre de) Tj ET
+BT /F1 10 Tf 50 418 Td (gouvernance.) Tj ET
+BT /F2 14 Tf 50 396 Td (12. L?architecture comme fabrique d?agents) Tj ET
+BT /F1 10 Tf 50 366 Td (La cons\351quence la plus forte de cette lecture est la suivante: le syst\350me ne doit pas \352tre) Tj ET
+BT /F1 10 Tf 50 352 Td (pens\351 comme un agent unique, mais comme une fabrique d?agents gouvern\351s.) Tj ET
+BT /F1 10 Tf 50 330 Td (La coh\351rence n?est pas seulement dans Ora comme instance singuli\350re. Elle est dans la) Tj ET
+BT /F1 10 Tf 50 316 Td (capacit\351 \340 produire une famille d?agents align\351s sur un m\352me canon, chacun ajust\351 \340 un) Tj ET
+BT /F1 10 Tf 50 302 Td (contexte, \340 un niveau de maturit\351, \340 un p\351rim\350tre de travail ou \340 un niveau de contrainte) Tj ET
+BT /F1 10 Tf 50 288 Td (documentaire.) Tj ET
+BT /F1 10 Tf 50 266 Td (Dans cette perspective, la modularit\351 n?est plus un confort d?ing\351nierie. Elle devient un) Tj ET
+BT /F1 10 Tf 50 252 Td (principe de stabilit\351, de lisibilit\351 et d?\351volution contr\364l\351e.) Tj ET
+BT /F2 14 Tf 50 230 Td (13. Profils de configuration recommand\351s) Tj ET
+BT /F2 14 Tf 50 192 Td (14. Effets attendus sur le fonctionnement) Tj ET
+BT /F1 10 Tf 50 162 Td (-) Tj ET
+BT /F1 10 Tf 58 162 Td (moins de friction entre l?identit\351 de l?agent et les contraintes r\351elles du contexte) Tj ET
+BT /F1 10 Tf 66 148 Td (d?usage) Tj ET
+BT /F1 10 Tf 50 134 Td (-) Tj ET
+BT /F1 10 Tf 58 134 Td (capacit\351 \340 produire une version stable sans r\351\351crire l?ensemble du syst\350me) Tj ET
+BT /F1 10 Tf 50 120 Td (-) Tj ET
+BT /F1 10 Tf 58 120 Td (meilleure lisibilit\351 du risque, car les briques de contr\364le restent visibles et s\351par\351es) Tj ET
+BT /F1 10 Tf 50 106 Td (-) Tj ET
+BT /F1 10 Tf 58 106 Td (ajustement plus d\351fendable: on active des modules pour une raison, pas pour un effet) Tj ET
+BT /F1 10 Tf 50 92 Td (-) Tj ET
+BT /F1 10 Tf 58 92 Td (facilit\351 de maintenance sup\351rieure, car la suppression d?un module ne doit pas d\351truire) Tj ET
+BT /F1 10 Tf 66 78 Td (le noyau) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 15 0 R /F2 16 0 R /F3 17 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 4274 >>
+stream
+BT /F2 10 Tf 50 815 Td (ORA White Paper) Tj ET
+BT /F2 9 Tf 500 30 Td (5/6) Tj ET
+BT /F2 14 Tf 50 790 Td (15. Risques structurels \340 surveiller) Tj ET
+BT /F1 10 Tf 50 760 Td (Le premier risque est la densit\351 conceptuelle. Une architecture tr\350s riche peut devenir) Tj ET
+BT /F1 10 Tf 50 746 Td (difficile \340 expliquer si la hi\351rarchie des responsabilit\351s n?est pas explicit\351e partout de) Tj ET
+BT /F1 10 Tf 50 732 Td (la m\352me mani\350re.) Tj ET
+BT /F1 10 Tf 50 710 Td (Le deuxi\350me risque est le chevauchement partiel entre certaines couches de contr\364le. Trop de) Tj ET
+BT /F1 10 Tf 50 696 Td (modules qui observent, arbitrent ou modulent peuvent cr\351er une impression de puissance tout) Tj ET
+BT /F1 10 Tf 50 682 Td (en augmentant l?ambigu\357t\351 d?exploitation.) Tj ET
+BT /F1 10 Tf 50 660 Td (Le troisi\350me risque est la confusion entre modules symboliques et modules testables. Une) Tj ET
+BT /F1 10 Tf 50 646 Td (brique peut \352tre tr\350s f\351conde intellectuellement sans \352tre encore suffisamment instrument\351e) Tj ET
+BT /F1 10 Tf 50 632 Td (pour un usage standard.) Tj ET
+BT /F2 12 Tf 50 610 Td (R\350gle de gouvernance recommand\351e) Tj ET
+BT /F1 10 Tf 50 584 Td (Toute brique dont la valeur n?est ni mesurable, ni explicable, ni testable doit rester hors) Tj ET
+BT /F1 10 Tf 50 570 Td (du profil standard. Elle peut exister comme mode expert, comme laboratoire ou comme) Tj ET
+BT /F1 10 Tf 50 556 Td (signature, mais pas comme implicite de fonctionnement.) Tj ET
+BT /F2 14 Tf 50 534 Td (16. Recommandations de stabilisation) Tj ET
+BT /F1 10 Tf 50 504 Td (-) Tj ET
+BT /F1 10 Tf 58 504 Td (formaliser une hi\351rarchie d?arbitrage tr\350s courte: qui observe, qui juge, qui compile,) Tj ET
+BT /F1 10 Tf 66 490 Td (qui verrouille, qui m\351morise, qui restitue) Tj ET
+BT /F1 10 Tf 50 476 Td (-) Tj ET
+BT /F1 10 Tf 58 476 Td (scinder le profil ma\356tre en trois sous-couches: identit\351, politique de r\351ponse, options) Tj ET
+BT /F1 10 Tf 66 462 Td (runtime) Tj ET
+BT /F1 10 Tf 50 448 Td (-) Tj ET
+BT /F1 10 Tf 58 448 Td (taguer les modules selon quatre statuts internes: canon op\351ratoire, politique de) Tj ET
+BT /F1 10 Tf 66 434 Td (comportement, couche experte, couche exp\351rimentale) Tj ET
+BT /F1 10 Tf 50 420 Td (-) Tj ET
+BT /F1 10 Tf 58 420 Td (transformer davantage de principes en tests de non-r\351gression, surtout pour les modules) Tj ET
+BT /F1 10 Tf 66 406 Td (du noyau) Tj ET
+BT /F1 10 Tf 50 392 Td (-) Tj ET
+BT /F1 10 Tf 58 392 Td (rendre le compilateur de besoin capable d?\351mettre un manifeste de chargement clair par) Tj ET
+BT /F1 10 Tf 66 378 Td (contexte ou par profil) Tj ET
+BT /F2 14 Tf 50 356 Td (17. Proposition de manifeste de chargement) Tj ET
+BT /F1 10 Tf 50 326 Td (Pour rendre la configuration publiable et reproductible, le compilateur de besoin devrait) Tj ET
+BT /F1 10 Tf 50 312 Td (produire non seulement une r\351ponse, mais aussi un manifeste de composition. Ce manifeste) Tj ET
+BT /F1 10 Tf 50 298 Td (peut rester interne, mais il constitue la meilleure preuve que la configuration n?est pas) Tj ET
+BT /F1 10 Tf 50 284 Td (improvis\351e.) Tj ET
+BT /F1 10 Tf 50 262 Td (Un manifeste de chargement minimal devrait inclure:) Tj ET
+BT /F1 10 Tf 50 240 Td (-) Tj ET
+BT /F1 10 Tf 58 240 Td (le profil vis\351) Tj ET
+BT /F1 10 Tf 50 226 Td (-) Tj ET
+BT /F1 10 Tf 58 226 Td (les modules obligatoires activ\351s) Tj ET
+BT /F1 10 Tf 50 212 Td (-) Tj ET
+BT /F1 10 Tf 58 212 Td (les modules de capacit\351 activ\351s) Tj ET
+BT /F1 10 Tf 50 198 Td (-) Tj ET
+BT /F1 10 Tf 58 198 Td (les modules explicitement exclus) Tj ET
+BT /F1 10 Tf 50 184 Td (-) Tj ET
+BT /F1 10 Tf 58 184 Td (le niveau de risque) Tj ET
+BT /F1 10 Tf 50 170 Td (-) Tj ET
+BT /F1 10 Tf 58 170 Td (la strat\351gie m\351moire) Tj ET
+BT /F1 10 Tf 50 156 Td (-) Tj ET
+BT /F1 10 Tf 58 156 Td (la strat\351gie documentaire) Tj ET
+BT /F1 10 Tf 50 142 Td (-) Tj ET
+BT /F1 10 Tf 58 142 Td (les contraintes de sortie) Tj ET
+BT /F2 14 Tf 50 112 Td (18. Port\351e architecturale) Tj ET
+BT /F1 10 Tf 50 82 Td (La port\351e du syst\350me est plus grande qu?un simple agent. Il s?agit d?une architecture de) Tj ET
+BT /F1 10 Tf 50 68 Td (composition d?agents gouvern\351s, dont Ora est \340 la fois un exemple, un noyau de r\351f\351rence et) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 15 0 R /F2 16 0 R /F3 17 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 3475 >>
+stream
+BT /F2 10 Tf 50 815 Td (ORA White Paper) Tj ET
+BT /F2 9 Tf 500 30 Td (6/6) Tj ET
+BT /F1 10 Tf 50 790 Td (une signature.) Tj ET
+BT /F1 10 Tf 50 768 Td (Une interaction ne mobilise pas seulement une conversation, mais une configuration gouvern\351e) Tj ET
+BT /F1 10 Tf 50 754 Td (de capacit\351s, un niveau de prudence, une m\351moire r\351gl\351e, un p\351rim\350tre d?action, une) Tj ET
+BT /F1 10 Tf 50 740 Td (strat\351gie documentaire et une qualit\351 de sortie.) Tj ET
+BT /F1 10 Tf 50 718 Td (Dans cette lecture, ORA Core OS, ORA RAG, le compilateur de besoin et la modularit\351 forment) Tj ET
+BT /F1 10 Tf 50 704 Td (un tout coh\351rent: le code, la gouvernance documentaire et le comportement de l?agent) Tj ET
+BT /F1 10 Tf 50 690 Td (racontent la m\352me architecture.) Tj ET
+BT /F2 14 Tf 50 668 Td (19. Conclusion) Tj ET
+BT /F1 10 Tf 50 638 Td (L?architecture d?Ora est forte non parce qu?elle cherche \340 faire croire \340 une conscience) Tj ET
+BT /F1 10 Tf 50 624 Td (unifi\351e, mais parce qu?elle organise des fonctions distinctes de mani\350re gouvern\351e: v\351rit\351,) Tj ET
+BT /F1 10 Tf 50 610 Td (arbitrage, compilation, m\351moire, restitution, segmentation documentaire et sp\351cialisation.) Tj ET
+BT /F1 10 Tf 50 588 Td (Le compilateur de besoin en langage naturel appara\356t alors comme la pi\350ce de passage du) Tj ET
+BT /F1 10 Tf 50 574 Td (syst\350me. C?est lui qui permet de transformer la richesse interne de l?architecture en) Tj ET
+BT /F1 10 Tf 50 560 Td (configurations stables, intelligibles et adapt\351es.) Tj ET
+BT /F1 10 Tf 50 538 Td (La meilleure lecture du projet est donc celle-ci: Ora n?est pas seulement un agent. Ora est) Tj ET
+BT /F1 10 Tf 50 524 Td (le noyau d?une architecture modulaire, con\347ue pour pr\351server la coh\351rence tout en autorisant) Tj ET
+BT /F1 10 Tf 50 510 Td (des formes vari\351es d?activation, y compris dans sa couche RAG.) Tj ET
+BT /F2 14 Tf 50 488 Td (R\351f\351rences) Tj ET
+BT /F1 10 Tf 50 458 Td (-) Tj ET
+BT /F1 10 Tf 58 458 Td (GitHub Docs. *Best practices for creating a GitHub App*. Consult\351 le 11 mai 2026.) Tj ET
+BT /F1 10 Tf 66 444 Td (https://docs.github.com/en/apps/creating-github-apps/setting-up-a-github-app/best-) Tj ET
+BT /F1 10 Tf 66 430 Td (practices-for-creating-a-github-app) Tj ET
+BT /F1 10 Tf 50 416 Td (-) Tj ET
+BT /F1 10 Tf 58 416 Td (OWASP Cheat Sheet Series. *Logging Cheat Sheet*. Consult\351 le 11 mai 2026.) Tj ET
+BT /F1 10 Tf 66 402 Td (https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) Tj ET
+BT /F1 10 Tf 50 388 Td (-) Tj ET
+BT /F1 10 Tf 58 388 Td (OWASP Cheat Sheet Series. *Authentication Cheat Sheet*. Consult\351 le 11 mai 2026.) Tj ET
+BT /F1 10 Tf 66 374 Td (https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) Tj ET
+BT /F1 10 Tf 50 360 Td (-) Tj ET
+BT /F1 10 Tf 58 360 Td (OpenAI API Documentation. *Retrieval*. Consult\351 le 11 mai 2026.) Tj ET
+BT /F1 10 Tf 66 346 Td (https://platform.openai.com/docs/guides/retrieval) Tj ET
+BT /F1 10 Tf 50 332 Td (-) Tj ET
+BT /F1 10 Tf 58 332 Td (OpenAI API Documentation. *File search*. Consult\351 le 11 mai 2026.) Tj ET
+BT /F1 10 Tf 66 318 Td (https://platform.openai.com/docs/guides/tools-file-search/) Tj ET
+BT /F1 10 Tf 50 304 Td (-) Tj ET
+BT /F1 10 Tf 58 304 Td (Anthropic Research. *Contextual Retrieval*. Publi\351 le 19 septembre 2024, consult\351 le 11) Tj ET
+BT /F1 10 Tf 66 290 Td (mai 2026. https://www.anthropic.com/research/contextual-retrieval) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+16 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+17 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000016 00000 n 
+0000000065 00000 n 
+0000000154 00000 n 
+0000000303 00000 n 
+0000004328 00000 n 
+0000004477 00000 n 
+0000008047 00000 n 
+0000008196 00000 n 
+0000012533 00000 n 
+0000012683 00000 n 
+0000017266 00000 n 
+0000017417 00000 n 
+0000021743 00000 n 
+0000021894 00000 n 
+0000025421 00000 n 
+0000025492 00000 n 
+0000025568 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R >>
+startxref
+25644
+%%EOF
