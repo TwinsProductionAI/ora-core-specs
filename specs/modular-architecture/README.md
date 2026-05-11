@@ -6,6 +6,8 @@ Public white paper bundle for the modular architecture of `ORA Core OS` and `ORA
 
 - `ORA_CORE_OS_ORA_RAG_MODULAR_ARCHITECTURE_WhitePaper.md`
   Main public white paper in French.
+- `ORA_CORE_OS_ORA_RAG_MODULAR_ARCHITECTURE_WhitePaper.pdf`
+  Publication PDF version of the same white paper.
 
 ## Scope
 
