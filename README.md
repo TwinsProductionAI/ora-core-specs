@@ -24,6 +24,10 @@ This repository is the publication-ready public bundle for:
 - glyph and Rosetta-related technical notes useful for implementation
 - public white papers and integration notes
 
+## White Paper Index
+
+- [Global ORA White Papers Index](WHITEPAPERS.md)
+
 ## Module Directories
 
 - `specs/h-nerons`
